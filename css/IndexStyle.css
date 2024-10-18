@@ -44,3 +44,15 @@ img {
   margin: 5px;
   margin-left: 10px;
 }
+
+.header-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.page-title {
+  display: flex;
+  font-size: 100px;
+  justify-content: center;
+  top: 50em;
+}
