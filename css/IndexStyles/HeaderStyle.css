@@ -2,6 +2,12 @@
   position: sticky;
   top: 0px;
 
+  border-color: rgb(17, 59, 41);
+  border-style: solid;
+  border-width: 3px;
+
+  size: 15%;
+
   display: flex;
   background-color: rgb(28, 109, 74);
 }
@@ -10,9 +16,18 @@
   justify-content: start;
   margin: 5px;
   margin-left: 10px;
+  width: 50px;
+}
+
+.header-sections {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .header-section {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
   display: flex;
   justify-content: space-evenly;
 }

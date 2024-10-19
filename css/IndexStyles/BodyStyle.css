@@ -27,21 +27,12 @@ body {
   background-color: rgb(72, 146, 72);
 }
 
-img:hover {
-  border-width: 10px;
-}
-
-img {
-  width: 50px;
-}
-
 .page-title {
   display: flex;
   font-size: 100px;
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  top: 50em;
 }
 
 .center-vertically {
@@ -49,7 +40,7 @@ img {
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  top: 30%;
+  top: 40%;
 }
 
 p {

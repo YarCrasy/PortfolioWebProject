@@ -1,0 +1,22 @@
+.footer {
+  position: relative;
+  bottom: 0px;
+  size: 15%;
+  display: flex;
+  background-color: rgb(91, 68, 106);
+}
+
+.footer-p {
+  color: black;
+  font-weight: bold;
+}
+
+.media-icon {
+  width: 10%;
+}
+
+.social-media {
+  border-color: rgb(17, 59, 41);
+  border-style: solid;
+  border-width: 3px;
+}
