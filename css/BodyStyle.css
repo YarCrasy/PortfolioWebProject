@@ -18,13 +18,13 @@
 @media only screen and (min-width: 1200px) {
 }
 
-body {
-  background-color: rgb(76, 145, 115);
-}
-
 * {
   margin: 0;
   border: 0;
+}
+
+body {
+  background-color: rgb(72, 146, 72);
 }
 
 img:hover {
@@ -38,24 +38,20 @@ img {
 .page-title {
   display: flex;
   font-size: 100px;
+  flex-direction: row;
   justify-content: center;
+  text-align: center;
   top: 50em;
 }
 
-.pre-footer {
-  position: absolute;
-  bottom: 75px;
-  width: 100%;
-  height: 75px;
+.center-vertically {
   display: flex;
-  background-color: rgb(91, 68, 106);
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 75px;
-  display: flex;
-  background-color: rgb(91, 68, 106);
+p {
+  color: rgb(60, 35, 77);
 }
