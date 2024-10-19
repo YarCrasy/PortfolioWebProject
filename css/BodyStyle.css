@@ -18,6 +18,10 @@
 @media only screen and (min-width: 1200px) {
 }
 
+body {
+  background-color: rgb(76, 145, 115);
+}
+
 * {
   margin: 0;
   border: 0;
@@ -31,28 +35,27 @@ img {
   width: 50px;
 }
 
-.header {
-  position: sticky;
-  top: 0px;
-
-  display: flex;
-  background-color: rgb(32, 154, 32);
-}
-
-.header-icon {
-  justify-content: start;
-  margin: 5px;
-  margin-left: 10px;
-}
-
-.header-section {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .page-title {
   display: flex;
   font-size: 100px;
   justify-content: center;
   top: 50em;
+}
+
+.pre-footer {
+  position: absolute;
+  bottom: 75px;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  background-color: rgb(91, 68, 106);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  background-color: rgb(91, 68, 106);
 }
