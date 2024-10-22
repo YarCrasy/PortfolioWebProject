@@ -1,0 +1,21 @@
+.game-sections {
+    display: flex;
+    flex-direction: column;
+
+
+    border-color: rgb(75, 43, 66);
+    border-style: solid;
+    border-width: 3px;
+
+}
+
+.game-section {
+    padding: 5%;
+}
+
+.game-section strong {
+    font-size: 36px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-decoration: underline;
+    font-style: italic;
+}
