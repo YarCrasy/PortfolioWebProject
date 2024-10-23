@@ -27,10 +27,12 @@
     font-family: "Lucida Console", "Courier New", monospace;
     text-decoration: underline;
     font-style: italic;
+    margin: 2vw;
+    margin-bottom: 0;
 }
 
+
 .portrait {
-    display: flex;
     margin: 2vw;
 }
 
@@ -43,6 +45,9 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
+    border-color: rgb(75, 43, 66);
+    border-style: solid;
+    border-width: 2px;
 
 }
 
@@ -50,6 +55,9 @@
     margin: 2vw;
     display: flex;
     justify-content: center;
+    border-color: rgb(75, 43, 66);
+    border-style: solid;
+    border-width: 2px;
 
 }
 
@@ -78,7 +86,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .screenshoot {
-        width: 45%;
+        width: 40%;
     }
 }
 
@@ -90,9 +98,32 @@
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    
-}
+@media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+
+    .images-container {
+        display: flex;
+        flex-direction: row;
+        border-color: rgb(75, 43, 66);
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    .portrait {
+        width: 75%;
+        border-color: rgb(75, 43, 66);
+        border-style: solid;
+        border-width: 5px;
+    }
+
+    .screenshoots {
+        width: 20%;
+    }
+
+    .screenshoot {
+        width: 100%;
+    }
+
+}
