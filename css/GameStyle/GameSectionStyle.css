@@ -11,6 +11,10 @@
 
 .game-section {
     padding: 5%;
+    
+    border-color: rgb(75, 43, 66);
+    border-style: solid;
+    border-width: 1px;
 }
 
 .game-section strong {
