@@ -106,21 +106,42 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+    .screenshoot {
+        width: 19%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    .screenshoot {
+        width: 19%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
     .images-container {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        margin: 2vw;
+        margin: 5vw;
+        margin-top: 0;
+        margin-bottom: 0;
         border-color: rgb(75, 43, 66);
         border-style: solid;
         border-width: 2px;
-        height: 80vh;
+        height: 70vh;
     }
 
     .portrait {
-        width: 80%;
+        width: auto;
+        height: 100%;
         border-width: 0px;
-        margin: 1vw;
+        border-color: rgb(75, 43, 66);
+        border-style: solid;
+        border-width: 2px;
+        margin: 0;
     }
 
     .screenshoots {
@@ -130,22 +151,20 @@
         flex-shrink: 0;
         width: 20%;
         height: 100%;
+        align-self: flex-end;
 
         overflow-y: auto;
         padding-right: 1px;
     }
 
     .screenshoot {
-        width: 80%;
+        width: 100%;
         display: flex;
-        margin: 1vw;
+        margin: 0vw;
     }
 
     .screenshoot img {
-        width: auto;
-        display: flex;
+        width: 90%;
+        margin: 1vw;
     }
 }
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}

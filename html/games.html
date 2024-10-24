@@ -101,14 +101,14 @@
 
   <!--Scripts area-->
   <script>
-    const originalPortrait = "../imgs/GameImgs/Test.png";
-    const portrait = document.getElementById('portrait');
+    const ORIGINAL_PORTRAIT = "../imgs/GameImgs/Test.png";
+    const PORTRAIT = document.getElementById('portrait');
     function changePortrait(element) {
       const newImage = element.src;
-      portrait.src = newImage;
+      PORTRAIT.src = newImage;
     }
     function rstPortrait() {
-      portrait.src = originalPortrait;
+      PORTRAIT.src = ORIGINAL_PORTRAIT;
     }
   </script>
 
