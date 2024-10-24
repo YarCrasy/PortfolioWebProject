@@ -50,30 +50,32 @@
         <h1>Game1</h1>
         <div class="images-container">
           <div class="portrait">
-            <img src="../imgs/GameImgs/Test.png" alt="portrait">
+            <img id="portrait" src="../imgs/GameImgs/Test.png" alt="portrait">
           </div>
           <div class="screenshoots">
             <div class="screenshoot">
-              <img src="../imgs/GameImgs/Test.png" alt="screenshoot">
+              <img src="../imgs/IndexImgs/LCJ-icon.jpg" alt="screenshoot" onmouseover="changePortrait(this)"
+                onmouseleave="rstPortrait()">
             </div>
             <div class="screenshoot">
-              <img src="../imgs/GameImgs/Test.png" alt="screenshoot">
+              <img src="../imgs/IndexImgs/LCJ-icon.jpg" alt="screenshoot" onmouseover="changePortrait(this)"
+                onmouseleave="rstPortrait()">
             </div>
             <div class="screenshoot">
-              <img src="../imgs/GameImgs/Test.png" alt="screenshoot">
+              <img src="../imgs/IndexImgs/LCJ-icon.jpg" alt="screenshoot" onmouseover="changePortrait(this)"
+                onmouseleave="rstPortrait()">
             </div>
             <div class="screenshoot">
-              <img src="../imgs/GameImgs/Test.png" alt="screenshoot">
+              <img src="../imgs/IndexImgs/LCJ-icon.jpg" alt="screenshoot" onmouseover="changePortrait(this)"
+                onmouseleave="rstPortrait()">
             </div>
             <div class="screenshoot">
-              <img src="../imgs/GameImgs/Test.png" alt="screenshoot">
-            </div>
-            <div class="screenshoot">
-              <img src="../imgs/GameImgs/Test.png" alt="screenshoot">
+              <img src="../imgs/IndexImgs/LCJ-icon.jpg" alt="screenshoot" onmouseover="changePortrait(this)"
+                onmouseleave="rstPortrait()">
             </div>
           </div>
         </div>
-        
+
         <div class="game-description">
           <h2 class="description-title">
             Description
@@ -96,6 +98,20 @@
       <p>v1.0</p>
     </div>
   </div>
+
+  <!--Scripts area-->
+  <script>
+    const originalPortrait = "../imgs/GameImgs/Test.png";
+    const portrait = document.getElementById('portrait');
+    function changePortrait(element) {
+      const newImage = element.src;
+      portrait.src = newImage;
+    }
+    function rstPortrait() {
+      portrait.src = originalPortrait;
+    }
+  </script>
+
 </body>
 
 </html>
