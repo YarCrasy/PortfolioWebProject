@@ -3,7 +3,6 @@
     flex-direction: column;
 
     height: 100%;
-    margin-top: 3%;
 
     border-color: rgb(75, 43, 66);
     border-style: solid;
@@ -14,29 +13,28 @@
     background-image: linear-gradient(to bottom right, rgb(155, 80, 136) 5%, rgb(88, 43, 76) 95%);
     border-color: rgb(75, 43, 66);
     border-style: solid;
-    border-width: 2px;
+    border-width: 5px;
 
-    margin: 10vw;
-    margin-top: 0;
+    margin: 3vw;
+
     display: flex;
     flex-direction: column;
 }
 
 .game-section h1 {
-    font-size: 3vh;
+    font-size: 52px;
     font-family: "Lucida Console", "Courier New", monospace;
     text-decoration: underline;
     font-style: italic;
-    margin: 2vw;
-    margin-bottom: 0;
+    margin: 5vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
 }
 
-
 .portrait {
-    margin: 2vw;
+    margin: 5vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .portrait img {
@@ -51,25 +49,16 @@
     border-color: rgb(75, 43, 66);
     border-style: solid;
     border-width: 2px;
-
 }
 
 .screenshoot {
-    margin: 2vw;
+    margin: 1vw;
     display: flex;
-    justify-content: center;
 
 }
 
 .screenshoot img {
     width: 100%;
-}
-
-.screenshoot img:hover {
-    border-color: rgb(75, 43, 66);
-    border-style: solid;
-    border-width: 2px;
-
 }
 
 .description-title {
@@ -81,13 +70,6 @@
     height: auto;
     margin: 2vw;
     text-align: left;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .screenshoot {
-        width: 80%;
-    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -121,27 +103,46 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .game-section {
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+
     .images-container {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         align-items: flex-start;
-        margin: 5vw;
-        margin-top: 0;
-        margin-bottom: 0;
-        border-color: rgb(75, 43, 66);
-        border-style: solid;
-        border-width: 2px;
-        height: 70vh;
+        margin-left: auto;
+        margin-right: auto;
+        height: 35vw;
+        width: 87%;
+    }
+
+    .center-portrait {
+        height: 100%;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
     }
 
     .portrait {
-        width: auto;
+        margin: auto;
         height: 100%;
-        border-width: 0px;
-        border-color: rgb(75, 43, 66);
+        width: fit-content;
+        flex-shrink: 0;
+        border-color: rgb(59, 36, 53);
         border-style: solid;
-        border-width: 2px;
-        margin: 0;
+        border-width: 3px;
+
+        flex-shrink: 0;
+    }
+
+    .portrait img {
+        width: 100%;
+        height: 100%;
+
+        flex-shrink: 0;
     }
 
     .screenshoots {
@@ -154,7 +155,7 @@
         align-self: flex-end;
 
         overflow-y: auto;
-        padding-right: 1px;
+        padding-right: 10px;
     }
 
     .screenshoot {
