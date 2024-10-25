@@ -8,6 +8,7 @@
  ## About the Project
 <p>
  This project is a part of a school project to make a simple web page for LND, but also is my portfolio to show my others project, mainly <b>game projects</b>.
+ The web is actually hosted <a href="https://yarcrasy.github.io/PortfolioWebProject/html/games.html">here</a>
 </p> 
 
  ## Build with
