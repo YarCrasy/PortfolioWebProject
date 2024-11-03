@@ -1,7 +1,15 @@
+.media-container {
+    border-color: rgb(140, 0, 255);
+    border-style: solid;
+    border-width: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .social-media {
     display: flex;
     flex-direction: column;
-    width: 10vw;
     border-color: rgb(0, 0, 0);
     border-style: solid;
     border-width: 5px;
@@ -9,7 +17,6 @@
 }
 
 .media-icon {
-    justify-content: center;
     border-color: rgb(75, 43, 66);
     border-style: solid;
     border-width: 5px;
