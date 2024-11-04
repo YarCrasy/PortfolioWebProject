@@ -1,29 +1,23 @@
 .media-container {
-    border-color: rgb(140, 0, 255);
-    border-style: solid;
-    border-width: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin-bottom: 2vw;
 }
 
 .social-media {
     display: flex;
     flex-direction: column;
-    border-color: rgb(0, 0, 0);
-    border-style: solid;
-    border-width: 5px;
-    justify-content: center;
 }
 
-.media-icon {
+h1 {
+    font-weight: bold;
+    color: black;
+}
+
+.container {
+
     border-color: rgb(75, 43, 66);
     border-style: solid;
-    border-width: 5px;
-}
-
-.media-name {
-    border-color: rgb(190, 37, 147);
-    border-style: solid;
-    border-width: 5px;
+    border-width: 2px;
 }

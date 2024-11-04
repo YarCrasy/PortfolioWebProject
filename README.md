@@ -1,7 +1,7 @@
 # PortfolioWebProject
 
  <div align="center">
-  <img align="center" class="header-icon" src="imgs/IndexImgs/LCJ-icon.jpg" alt="icon" />
+  <img align="center" class="header-icon" src="imgs/icon-imgs/lcj-icon.jpg" alt="icon" />
   <p>Author: Yar Crasy (LINGCHENG JIANG)</p>
  </div>
  
@@ -24,6 +24,9 @@ the web is currently made with 4 HTML files:
   * Game: where is posible to find all my game projects
   * Contact: where is displayed my social media
   * AboutMe: where you can find information about me
+
+  5 CSS files:
+  * bodyS
 
 ## Inspired in
 <p>As a requirement of the project, it must be inspirated in one of the design from the web <b>dribbble</b>.</p> 
