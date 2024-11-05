@@ -9,6 +9,7 @@ body {
 
 .contents {
   flex-direction: column;
+  min-height: 90vh;
 }
 
 .page-title {
@@ -64,7 +65,7 @@ h1 {
   margin: 5vw;
   margin-bottom: 2vw;
   margin-top: 2vw;
-  
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

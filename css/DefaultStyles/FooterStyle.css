@@ -5,6 +5,7 @@
   border-color: rgb(75, 43, 66);
   border-style: solid;
   border-width: 3px;
+  border-bottom: 0;
 
   min-height: 50px;
   max-height: 50vh;

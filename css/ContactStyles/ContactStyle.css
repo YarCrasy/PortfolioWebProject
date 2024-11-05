@@ -3,6 +3,9 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 2vw;
+    border-color: rgb(78, 0, 56);
+    border-style: solid;
+    border-width: 5px;
 }
 
 .social-media {
@@ -15,9 +18,9 @@ h1 {
     color: black;
 }
 
-.container {
+.submit-btn {
 
-    border-color: rgb(75, 43, 66);
+    border-color: rgb(78, 0, 56);
     border-style: solid;
-    border-width: 2px;
+    border-width: 5px;
 }
