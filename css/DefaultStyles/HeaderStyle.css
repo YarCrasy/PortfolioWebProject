@@ -27,8 +27,7 @@ header {
 }
 
 .header-sections {
-  visibility: hidden;
-  display: flex;
+  display: none;
   width: 100%;
 }
 
@@ -69,6 +68,11 @@ header {
   border-width: 2px;
 }
 
+.web-title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {}
@@ -79,7 +83,11 @@ header {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .header-sections {
-    visibility: visible;
+    display: flex;
+  }
+
+  .header-menu {
+    display: none;
   }
 }
 
