@@ -1,0 +1,30 @@
+.my-panel {
+    width: 80%;
+    background-image: linear-gradient(to bottom right, rgb(155, 80, 136) 5%, rgb(88, 43, 76) 95%);
+    border-color: rgb(75, 43, 66);
+    border-style: solid;
+    border-width: 5px;
+
+    padding: 2vw;
+    padding-top: 1vh;
+    padding-bottom: 1vw;
+    margin: 3vw;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

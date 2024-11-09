@@ -1,0 +1,64 @@
+.game-panels {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-title {
+    display: flex;
+    height: 20%;
+}
+
+.game-title h1 {
+    font-size: auto;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.portrait {
+    display: flex;
+    flex-direction: column;
+}
+
+.portrait img {
+    width: 100%;
+}
+
+.screenshoots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    width: auto;
+    height: 10vh;
+    align-self: flex-end;
+
+    overflow-x: auto;
+    padding-right: 10px;
+}
+
+.screenshoot {
+    margin: 1vw;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.screenshoot img {
+    width: 100%;
+}
+
+.description-title {
+    text-align: center;
+}
+
+.game-description {
+    text-align: center;
+    height: auto;
+    margin: 2vw;
+    text-align: left;
+}
+
+.game-description p {
+    margin: 1vw;
+}
