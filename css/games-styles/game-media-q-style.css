@@ -19,7 +19,6 @@
     }
 
     .portrait {
-        height: 100%;
         width: fit-content;
         flex-shrink: 0;
         border-color: rgb(59, 36, 53);

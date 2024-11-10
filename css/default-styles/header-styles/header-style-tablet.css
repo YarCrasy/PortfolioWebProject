@@ -2,14 +2,19 @@
 @media only screen and (min-width: 768px) {
 
     .web-title {
+        margin-top: 1%;
         width: 100%;
         height: 50%;
+    }
 
+    .web-title strong {
+        font-size: 3vh;
+        font-family: "Lucida Console", "Courier New", monospace;
+        color: rgb(189, 209, 193);
     }
 
     .header-menu {
         flex-direction: column;
-
     }
 
     .header-sections {

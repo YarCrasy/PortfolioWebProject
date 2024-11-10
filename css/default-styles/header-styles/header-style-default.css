@@ -10,7 +10,7 @@ header {
   border-width: 3px;
   border-top: 0;
 
-  height: 10vw;
+  height: 80px;
   background-image: linear-gradient(to bottom right, rgb(155, 80, 136) 5%, rgb(88, 43, 76) 95%);
   display: flex;
 }
@@ -29,7 +29,15 @@ header {
 .web-title {
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.web-title strong {
+  font-size: 2vh;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: rgb(189, 209, 193);
 }
 
 .header-menu {
@@ -50,6 +58,10 @@ header {
   height: 100%;
 }
 
+.header-section p {
+  height: 100%;
+}
+
 #header-menu-icon {
   height: 80%;
 }
@@ -60,11 +72,4 @@ header {
   justify-content: center;
   height: 100%;
   margin-right: 5px;
-}
-
-
-.web-title strong {
-  font-size: 3vw;
-  font-family: "Lucida Console", "Courier New", monospace;
-  color: rgb(189, 209, 193);
 }

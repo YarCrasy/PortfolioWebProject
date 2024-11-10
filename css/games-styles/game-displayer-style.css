@@ -9,6 +9,11 @@
     font-style: italic;
 }
 
+.images-container {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
 .portrait {
     display: flex;
     flex-direction: column;
@@ -48,10 +53,5 @@
 .game-description {
     text-align: center;
     height: auto;
-    margin: 2vw;
     text-align: left;
-}
-
-.game-description p {
-    margin: 1vw;
 }
