@@ -13,11 +13,6 @@
     flex-direction: column;
 }
 
-h1 {
-    font-weight: bold;
-    color: black;
-}
-
 .submit-btn {
 
     border-color: rgb(78, 0, 56);

@@ -1,3 +1,10 @@
+.panels-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .my-panel {
     width: 80%;
     background-image: linear-gradient(to bottom right, rgb(155, 80, 136) 5%, rgb(88, 43, 76) 95%);
