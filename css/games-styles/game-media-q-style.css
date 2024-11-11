@@ -1,59 +1,36 @@
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .portrait {
+        height: 30vw;
+    }
+}
+
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-    .images-container {
+    .horizontal-display {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-left: auto;
-        margin-right: auto;
-        height: 35vw;
     }
 
-    .center-portrait {
-        height: 100%;
-        width: 80%;
-        justify-content: center;
-        align-items: center;
+    .game-imgs {
+        width: 65%;
     }
 
     .portrait {
-        width: fit-content;
-        flex-shrink: 0;
-        border-color: rgb(59, 36, 53);
-        border-style: solid;
-        border-width: 3px;
-
-    }
-
-    .portrait img {
-        width: 100%;
-        height: 100%;
-
+        height: 25vw;
     }
 
     .screenshoots {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        flex-shrink: 0;
-        width: 20%;
+        height: 7vw;
+        border: 3px solid rgb(75, 43, 66);
+    }
+
+    .game-description {
         height: 100%;
-        align-self: flex-end;
-
-        overflow-y: auto;
-        padding-right: 10px;
-    }
-
-    .screenshoot {
-        width: 100%;
-        display: flex;
-        margin: 0vw;
-    }
-
-    .screenshoot img {
-        width: 90%;
-        margin: 1vw;
+        border: 3px solid rgb(75, 43, 66);
+        margin-left: 10px;
     }
 }

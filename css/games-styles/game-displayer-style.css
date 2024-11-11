@@ -9,18 +9,16 @@
     font-style: italic;
 }
 
-.images-container {
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
 .portrait {
+    height: 40vw;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .portrait img {
-    width: 100%;
+    flex-shrink: 1;
+    height: 100%;
+    width: max-content;
 }
 
 .screenshoots {
@@ -28,12 +26,10 @@
     flex-direction: row;
     flex-wrap: nowrap;
     flex-shrink: 0;
-    width: auto;
-    height: 10vh;
-    align-self: flex-end;
+    height: 15vw;
+    width: 100%;
 
     overflow-x: auto;
-    padding-right: 10px;
 }
 
 .screenshoot {
@@ -46,12 +42,14 @@
     width: 100%;
 }
 
-.description-title {
-    text-align: center;
+.game-description {
+    margin-top: 10px;
+    height: 25%;
+    text-align: left;
+
+    overflow-y: auto;
 }
 
-.game-description {
+.description-title {
     text-align: center;
-    height: auto;
-    text-align: left;
 }

@@ -1,25 +1,30 @@
 .panels-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden; /* Asegura que no haya desbordamiento */
+    position: relative; /* Necesario para centrar los paneles */
 }
 
 .my-panel {
-    width: 80%;
+    width: 80vw;
+    max-width: 80vw;
+    min-width: 50vw;
+    height: 75vh;
     background-image: linear-gradient(to bottom right, rgb(155, 80, 136) 5%, rgb(88, 43, 76) 95%);
-    border-color: rgb(75, 43, 66);
-    border-style: solid;
-    border-width: 5px;
-
-    padding: 2vw;
-    padding-top: 1vh;
-    padding-bottom: 1vw;
-    margin: 3vw;
-
+    border: 5px solid rgb(75, 43, 66);
+    border-radius: 15px;
+    padding: 1vh 2vw 1vw;
     display: flex;
     flex-direction: column;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    position: relative;
+    transform-origin: center center;
+    opacity: 0.9;
 }
+
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -29,8 +34,6 @@
 @media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
 @media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

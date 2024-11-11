@@ -5,6 +5,7 @@
     border-color: rgb(78, 0, 56);
     border-style: solid;
     border-width: 5px;
+    height: 100%;
 }
 
 .social-media {
@@ -13,7 +14,9 @@
 }
 
 .submit-btn {
-
+    display: flex;
+    width: fit-content;
+    justify-content: end;
     border-color: rgb(78, 0, 56);
     border-style: solid;
     border-width: 5px;

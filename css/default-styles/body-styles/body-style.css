@@ -4,17 +4,19 @@
 }
 
 body {
+  height: 100%;
   background-image: linear-gradient(to bottom left, rgb(53, 153, 53), rgb(25, 133, 25) 30%, rgb(60, 160, 60) 70%, rgb(112, 201, 112));
 }
 
 .contents {
+  min-height: 85vh;
+  display: flex;
   flex-direction: column;
-  min-height: 90vh;
+  overflow: hidden;
 }
 
 .page-title {
-  height: 90vh;
-
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,4 +46,10 @@ h1 {
   font-family: "Lucida Console", "Courier New", monospace;
   font-weight: bold;
   color: black;
+}
+
+label {
+  color: rgb(189, 209, 193);
+  font-family: "Lucida Console", "Courier New", monospace;
+
 }

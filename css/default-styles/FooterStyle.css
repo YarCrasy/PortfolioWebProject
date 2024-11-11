@@ -1,6 +1,6 @@
 footer {
-  position: static;
-  bottom: 0px;
+  position: sticky;
+  bottom: 0;
 
   border-color: rgb(75, 43, 66);
   border-style: solid;
