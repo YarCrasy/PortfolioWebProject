@@ -1,12 +1,24 @@
 .game-title {
     display: flex;
-    height: 20%;
+    margin: 20px;
 }
 
 .game-title h1 {
     font-size: auto;
     text-decoration: underline;
     font-style: italic;
+}
+
+.horizontal-display {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.game-imgs {
+    margin: auto;
 }
 
 .portrait {
@@ -28,12 +40,12 @@
     flex-shrink: 0;
     height: 15vw;
     width: 100%;
+    padding: 10px;
 
     overflow-x: auto;
 }
 
 .screenshoot {
-    margin: 1vw;
     display: flex;
     flex-shrink: 0;
 }
@@ -44,7 +56,7 @@
 
 .game-description {
     margin-top: 10px;
-    height: 25%;
+    height: 100%;
     text-align: left;
 
     overflow-y: auto;
