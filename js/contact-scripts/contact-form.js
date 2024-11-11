@@ -24,7 +24,7 @@ function validateEmail(event) {
 
     valid = !MSG_SENT;
     if (!valid) {
-        showError("message", "message empty");
+        showError("message-box", "message empty");
     }
     else {
         showSuccessMsg();
