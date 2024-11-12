@@ -14,9 +14,13 @@ window.onload = () => {
 
 function handleScroll(event) {
     event.preventDefault();
-
-    scrollPosition += event.deltaY / 700; //detect every scroll tick, in this case every 7 tick reach a new panel
-
+    //detect every scroll tick, in this case every 7 tick reach a new panel
+    if (window.innerHeight < 1080) {
+        scrollPosition += event.deltaY / 800;
+    }
+    else {
+        scrollPosition += event.deltaY / 700;
+    }
     //limit scroll
     scrollPosition = Math.max(0, Math.min(PANELS.length - 1, scrollPosition));
 
