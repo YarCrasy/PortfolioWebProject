@@ -1,23 +1,87 @@
-.media-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border-color: rgb(78, 0, 56);
-    border-style: solid;
-    border-width: 5px;
-    height: 100%;
-}
-
-.social-media {
+/* Form styles */
+.form-item {
     display: flex;
     flex-direction: column;
 }
 
+label {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.input-field {
+    background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
+    border: 5px solid rgba(20, 128, 20, 0.5);
+    border-radius: 10px;
+}
+
+#message-box {
+    display: flex;
+    height: 300px;
+}
+
+.submit-control {
+    min-height: 20%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .submit-btn {
     display: flex;
-    width: fit-content;
     justify-content: end;
-    border-color: rgb(78, 0, 56);
-    border-style: solid;
-    border-width: 5px;
+}
+
+.submit-btn button {
+    background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
+    border: 5px solid rgb(20, 128, 20);
+    border-radius: 15px;
+    height: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 20px;
+}
+
+#submit-success-msg {
+    visibility: hidden;
+    border-radius: 15px;
+    border: 5px solid rgb(20, 128, 20);
+    background-color: rgb(13, 158, 13);
+    width: 100%;
+    margin-right: 10px;
+}
+
+.submit-success-msg p {
+    padding-top: auto;
+    padding-bottom: auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.fade-out{
+    opacity: 0;
+    transition: opacity 5s ease;
+}
+
+
+
+
+/* Social media styles */
+.media-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 5px solid rgb(75, 43, 66);
+    height: 100%;
+}
+
+.social-media {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }

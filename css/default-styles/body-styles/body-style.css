@@ -43,6 +43,7 @@ p {
 }
 
 h1 {
+  margin-top: 10px;
   font-family: "Lucida Console", "Courier New", monospace;
   font-weight: bold;
   color: black;

@@ -3,7 +3,6 @@ function initValidation() {
     MSG_FORM.addEventListener("submit", validateEmail);
 }
 
-/** @param {SubmitEvent} event */
 function validateEmail(event) {
 
     event.preventDefault();
@@ -12,19 +11,19 @@ function validateEmail(event) {
     const EMAIL = event.target.email.value;
     const MSG_SENT = event.target.message.value;
 
-    let valid = !EMAIL;
-    if (!valid) {
-        showError("email", "empty email");
-    }
+    //check email
+    if (!EMAIL || !EMAIL_REGEX.test(EMAIL) || !MSG_SENT) {
+        if (!EMAIL) {
+            showError("email", "empty email");
+        }
+        else if (!EMAIL_REGEX.test(EMAIL)) {
+            showError("email", "email format error");
+        }
 
-    valid = EMAIL_REGEX.test(EMAIL);
-    if (!valid) {
-        showError("email", "email format error");
-    }
-
-    valid = !MSG_SENT;
-    if (!valid) {
-        showError("message-box", "message empty");
+        //check msg
+        if (!MSG_SENT) {
+            showError("message-box", "empty message");
+        }
     }
     else {
         showSuccessMsg();
@@ -33,18 +32,27 @@ function validateEmail(event) {
 }
 
 function showError(elementId, msg) {
-    const displayer = document.getElementById(elementId);
-    displayer.textContent = msg;
+    const DISPLAYER = document.getElementById(elementId);
+    DISPLAYER.style.backgroundImage = "linear-gradient(to bottom right, rgb(236, 245, 236), rgb(226, 196, 196), rgb(199, 136, 136))";
+    DISPLAYER.style.borderColor = "rgba(128, 20, 20, 0.5)"
+    DISPLAYER.placeholder = msg;
 
-    //fade out displayer
+}
+
+function showSuccessMsg() {
+    const DISPLAYER = document.getElementById("submit-success-msg");
+    DISPLAYER.style.visibility = "visible";
+
+    //fade out DISPLAYER
     setTimeout(() => {
-        displayer.classList.add("fade-out");
+        DISPLAYER.classList.add("fade-out");
     }, 3000);
 }
 
-function showSuccessMsg(){
-    const displayer = document.getElementById("submit-success");
-    displayer.textContent = "message sent";
+function showDebugMessage(msg) {
+    const DISPLAYER = document.getElementById("submit-success-msg");
+    DISPLAYER.style.visibility = "visible";
+    DISPLAYER.textContent = msg;
 }
 
 initValidation();

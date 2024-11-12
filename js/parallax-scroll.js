@@ -8,14 +8,14 @@ let scrollPosition = 0; // Controlar la posición del scroll
 
 
 window.onload = () => {
-    //Reset position on load
+    //wait for the page to be totally loaded and update panels
     updatePanelsPosition();
 };
 
 function handleScroll(event) {
     event.preventDefault();
 
-    scrollPosition += event.deltaY / 800;
+    scrollPosition += event.deltaY / 700; //detect every scroll tick, in this case every 7 tick reach a new panel
 
     //limit scroll
     scrollPosition = Math.max(0, Math.min(PANELS.length - 1, scrollPosition));
@@ -25,14 +25,12 @@ function handleScroll(event) {
 
 function updatePanelsPosition() {
     PANELS.forEach((panel, index) => {
-        // Calculamos el desplazamiento de cada pestaña
-        let scale = Math.max(0.5, 0.9 - Math.abs(index - scrollPosition) * 0.5); // Escala para reducir las pestañas cuando se apilan
-        let opacity = Math.max(0.5, 1 - Math.abs(index - scrollPosition) * 0.5); // Opacidad para las pestañas cuando se alejan
+        let scale = Math.max(0.5, 0.9 - Math.abs(index - scrollPosition) * 0.5);
+        let opacity = Math.max(0.5, 1 - Math.abs(index - scrollPosition) * 0.5);
 
         panel.style.transform = `translateY(${0}px) scale(${scale})`;
-        panel.style.opacity = opacity; // Añadimos la opacidad para un efecto más suave
+        panel.style.opacity = opacity;
     });
 }
 
-// Detectar el evento de desplazamiento
 window.addEventListener('wheel', handleScroll);

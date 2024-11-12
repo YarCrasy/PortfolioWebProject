@@ -1,30 +1,12 @@
 .offcanvas-header {
     background-image: linear-gradient(to bottom right, rgb(155, 80, 136) 5%, rgb(88, 43, 76) 95%);
-    border-color: rgb(75, 43, 66);
-    border-style: solid;
-    border-width: 3px;
+    border: 3px solid rgb(75, 43, 66);
     border-top: 0;
 }
 
 .offcanvas-body {
     background-image: linear-gradient(to bottom left, rgb(53, 153, 53), rgb(25, 133, 25) 30%, rgb(60, 160, 60) 70%, rgb(112, 201, 112));
-
-    border-color: rgb(49, 117, 49);
-    border-style: solid;
-    border-width: 3px;
+    border: 3px solid rgb(49, 117, 49);
     border-top: 0;
     border-bottom: 0;
-}
-
-
-.form-floating {
-    margin-bottom: 5px;
-}
-
-.form-control {
-    background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
-}
-
-#message {
-    height: 20vh;
 }
