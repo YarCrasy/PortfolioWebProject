@@ -2,44 +2,79 @@
 .form-item {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 label {
-    margin: 10px;
+    margin-top: 10px;
     font-size: 20px;
 }
 
 .input-field {
+    padding: 10px;
+    height: 50px;
     background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
     border: 5px solid rgba(20, 128, 20, 0.5);
     border-radius: 10px;
 }
 
-#message-box {
-    display: flex;
-    height: 300px;
+.msg-type {
+    width: fit-content;
+    background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
+    border: 5px solid rgba(20, 128, 20, 0.5);
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-right: 50px;
 }
 
-.submit-control {
-    min-height: 20%;
-    margin-top: 20px;
+.msg-type label {
+    padding: 0;
+}
+
+.msg-type p {
+    color: rgb(21, 24, 21);
+    font-size: 14px;
+}
+
+#message-box {
+    display: flex;
+    margin-right: 20px;
+    height: 200px;
+}
+
+.msg-row-align {
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 100%;
 }
+
+#sub-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#sub-div p {
+    font-size: 12px;
+    margin: auto;
+}
+
+.temrs-conditions {
+    display: flex;
+    flex-wrap: nowrap;
+    height: fit-content;
+}
+
 
 .submit-btn {
     display: flex;
-    justify-content: end;
 }
 
 .submit-btn button {
     background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
     border: 5px solid rgb(20, 128, 20);
     border-radius: 15px;
-    height: 50%;
     margin-top: auto;
     margin-bottom: auto;
     padding-left: 40px;
@@ -48,11 +83,12 @@ label {
 }
 
 #submit-success-msg {
-    visibility: hidden;
+    /* visibility: hidden; */
     border-radius: 15px;
     border: 5px solid rgb(20, 128, 20);
     background-color: rgb(13, 158, 13);
     width: 100%;
+    margin-top: 10px;
     margin-right: 10px;
 }
 
@@ -63,13 +99,10 @@ label {
     font-size: 20px;
 }
 
-.fade-out{
+.fade-out {
     opacity: 0;
     transition: opacity 5s ease;
 }
-
-
-
 
 /* Social media styles */
 .media-container {

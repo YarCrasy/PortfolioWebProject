@@ -39,7 +39,6 @@ p {
   flex-direction: column;
   justify-content: center;
 
-
 }
 
 h1 {
@@ -52,5 +51,4 @@ h1 {
 label {
   color: rgb(189, 209, 193);
   font-family: "Lucida Console", "Courier New", monospace;
-
 }

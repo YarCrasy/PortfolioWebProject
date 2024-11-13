@@ -43,34 +43,69 @@
       <div class="my-panel">
         <h1>Send Message</h1>
         <form id="msg-form">
-
           <!-- contact email -->
           <div class="form-item">
-            <label for="email">Email</label>
+            <label for="email">Email:</label>
             <input type="text" class="input-field" id="email" placeholder="Enter email" name="email">
           </div>
 
-          <!-- Message -->
-          <div class="form-item">
-            <label for="message-box">Message</label>
-            <textarea class="input-field" id="message-box" name="message"
-              placeholder="What do you want to tell me?"></textarea>
+          <!-- Type of message -->
+          <label>Type of message:</label><br>
+          <div class="msg-type" id="msg-type">
+            <input type="radio" id="bug-report" name="msg-type" value="HTML">
+            <label for="bug-report">
+              <p>bug report</p>
+            </label><br>
+
+            <input type="radio" id="bussiness" name="msg-type" value="CSS">
+            <label for="bussiness">
+              <p>bussiness</p>
+            </label><br>
+
+            <input type="radio" id="other" name="msg-type" value="JavaScript">
+            <label for="other">
+              <p>other</p>
+            </label><br>
           </div>
 
-          <!-- Submit Control -->
-          <div class="submit-control">
-            <div id="submit-success-msg">
-              <p>
-                Submit success, I will contact you from the provided Email.
-              </p>
+          <!-- Message, temrs and submit buton -->
+          <div class="msg-row-align">
+            <div class="form-item">
+              <label for="message-box">Message:</label>
+              <textarea class="input-field" id="message-box" name="message"
+                placeholder="What do you want to tell me?"></textarea>
             </div>
 
-            <div class="submit-btn">
-              <button type="submit">Send</button>
+            <div id="sub-div">
+              <div class="submit-btn">
+                <button type="submit">Send</button>
+              </div>
+              <div class="temrs-conditions">
+                <input type="checkbox" id="temrs" name="temrs-checkbox" value="accept">
+                <label for="temrs-checkbox">
+                  <p>I accept term and conditions</p>
+                </label>
+              </div>
             </div>
+          </div>
+
+          <div id="submit-success-msg">
+            <p>
+              Submit success, I will contact you from the provided Email. <br>
+              Check the sent message in the panel below. <br>
+              ↓
+            </p>
           </div>
         </form>
       </div>
+
+
+      <!-- sent message -->
+      <div class="my-panel">
+        <h1>Sent Message</h1>
+
+      </div>
+
 
       <!--Social Media-->
       <div class="my-panel">
