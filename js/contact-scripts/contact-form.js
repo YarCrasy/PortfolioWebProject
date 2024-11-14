@@ -11,12 +11,13 @@ function validateEmail(event) {
 
     const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const EMAIL = event.target.email.value;
-    const MSG_SENT = event.target.message.value;
+    const MSG_2_SEND = event.target.message.value;
     const MSG_TYPE = event.target.elements["msg-type"].value;
+    const CHECKBOX = event.target.elements["temrs"].checked
 
     //check email
-    if (!EMAIL || !EMAIL_REGEX.test(EMAIL) || !MSG_TYPE || !MSG_SENT) {
-
+    if (!EMAIL || !EMAIL_REGEX.test(EMAIL) || !MSG_TYPE || !MSG_2_SEND || !CHECKBOX) {
+        
         if (!EMAIL || !EMAIL_REGEX.test(EMAIL)) {
             if (!EMAIL) {
                 showError("email", "empty email");
@@ -29,7 +30,7 @@ function validateEmail(event) {
             rstFormColor("email");
         }
 
-        //check msg
+        //check msg type
         if (!MSG_TYPE) {
             showError("msg-type", "message type not selected");
         }
@@ -37,14 +38,31 @@ function validateEmail(event) {
             rstFormColor("msg-type");
         }
 
-        if (!MSG_SENT) {
+        //check message
+        if (!MSG_2_SEND) {
             showError("message-box", "empty message");
         }
         else {
             rstFormColor("message-box");
         }
+
+        let aux;
+        //check checkbox
+        if (!CHECKBOX) {
+            showError("checkbox", "please agree to the terms");
+        }
+        else
+        {
+            aux = document.getElementById("terms-p");
+            aux.style.color = "rgb(189, 209, 193)";
+        }
+
+        aux = document.getElementById("submit-btn");
+        aux.style.backgroundImage = "linear-gradient(to bottom right, rgb(236, 245, 236), rgb(226, 196, 196), rgb(199, 136, 136))";
+        aux.style.borderColor = "rgba(128, 20, 20, 0.5)";
     }
     else {
+        saveFormData(EMAIL, MSG_TYPE, MSG_2_SEND);
         showSuccessMsg();
     }
 
@@ -52,10 +70,15 @@ function validateEmail(event) {
 
 function showError(elementId, msg) {
     const DISPLAYER = document.getElementById(elementId);
-    DISPLAYER.style.backgroundImage = "linear-gradient(to bottom right, rgb(236, 245, 236), rgb(226, 196, 196), rgb(199, 136, 136))";
-    DISPLAYER.style.borderColor = "rgba(128, 20, 20, 0.5)"
-    DISPLAYER.placeholder = msg;
 
+    if (elementId == "checkbox") {
+        const TXT = document.getElementById("terms-p");
+        TXT.style.color = "red";
+    } else {
+        DISPLAYER.style.backgroundImage = "linear-gradient(to bottom right, rgb(236, 245, 236), rgb(226, 196, 196), rgb(199, 136, 136))";
+        DISPLAYER.style.borderColor = "rgba(128, 20, 20, 0.5)";
+        DISPLAYER.placeholder = msg;
+    }
 }
 
 function showSuccessMsg() {
@@ -66,16 +89,37 @@ function showSuccessMsg() {
     rstFormColor("msg-type");
     rstFormColor("message-box");
 
+    let aux = document.getElementById("terms-p");
+    aux.style.color = "rgb(189, 209, 193)";
+    
+    aux = document.getElementById("submit-btn");
+    aux.style.backgroundImage = "linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136))";
+    aux.style.borderColor = "rgba(20, 128, 20, 0.5)"
+
     //fade out DISPLAYER
     setTimeout(() => {
         DISPLAYER.classList.add("fade-out");
     }, 5000);
 }
 
+function rstTermsColor(){
+    const TXT = document.getElementById("terms-p");
+    TXT.style.color = "rgb(189, 209, 193)";
+}
+
 function rstFormColor(elementId) {
     const DISPLAYER = document.getElementById(elementId);
     DISPLAYER.style.backgroundImage = "linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136))";
     DISPLAYER.style.borderColor = "rgba(20, 128, 20, 0.5)"
+}
+
+function saveFormData(email, msgType, msg) {
+    const formData = {
+        email: email,
+        msgType: msgType,
+        msg: msg
+    };
+    localStorage.setItem('contactFormData', JSON.stringify(formData));
 }
 
 initValidation();

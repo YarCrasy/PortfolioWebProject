@@ -25,6 +25,7 @@
 
   <!--Additional Styles-->
   <link rel="stylesheet" href="../css/contact-styles/contact-style.css">
+  <link rel="stylesheet" href="../css/contact-styles/contact-media-q-style.css">
   <link rel="stylesheet" href="../css/default-styles/body-styles/panel-style.css">
 </head>
 
@@ -69,23 +70,22 @@
           </div>
 
           <!-- Message, temrs and submit buton -->
-          <div class="msg-row-align">
-            <div class="form-item">
-              <label for="message-box">Message:</label>
-              <textarea class="input-field" id="message-box" name="message"
-                placeholder="What do you want to tell me?"></textarea>
+          <div class="form-item">
+            <label for="message-box">Message:</label>
+            <textarea class="input-field" id="message-box" name="message"
+              placeholder="What do you want to tell me?"></textarea>
+          </div>
+
+          <div class="row-align">
+            <div class="submit-btn">
+              <button type="submit" id="submit-btn">Send</button>
             </div>
 
-            <div id="sub-div">
-              <div class="submit-btn">
-                <button type="submit">Send</button>
-              </div>
-              <div class="temrs-conditions">
-                <input type="checkbox" id="temrs" name="temrs-checkbox" value="accept">
-                <label for="temrs-checkbox">
-                  <p>I accept term and conditions</p>
-                </label>
-              </div>
+            <div class="temrs-conditions">
+              <input type="checkbox" id="temrs" name="temrs-checkbox" value="accept">
+              <label for="temrs-checkbox">
+                <p id="terms-p">I accept term and conditions</p>
+              </label>
             </div>
           </div>
 
@@ -103,7 +103,13 @@
       <!-- sent message -->
       <div class="my-panel">
         <h1>Sent Message</h1>
-
+        <div class="sent-msgs-container">
+          <div class="sent-msg">
+            <p>Email: </p>
+            <p>Message: </p>
+            <p>Type: </p>
+          </div>
+        </div>
       </div>
 
 
@@ -160,8 +166,9 @@
   </footer>
 
   <script src="../js/add-html-components.js"></script>
-  <script src="../js/contact-scripts/contact-form.js"></script>
   <script src="../js/parallax-scroll.js"></script>
+  <script src="../js/contact-scripts/contact-form.js"></script>
+  <script src="../js/contact-scripts/show-msg.js"></script>
 
 </body>
 
