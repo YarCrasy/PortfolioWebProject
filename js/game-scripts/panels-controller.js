@@ -1,4 +1,3 @@
-
 //in the furute this data will be in a file
 const gamesData = [
     {
@@ -110,11 +109,14 @@ function updatePanelsContainer() {
         temp = document.createElement("img");
         temp.src = game.portraitSrc;
         temp.alt = "portrait";
+        temp.id = game.title.toLowerCase().replace(/\s+/g, '-'); // Add id attribute
         NEW_PORTRAIT.appendChild(temp);
 
         for (let i = 0; i < screenShootsDiv.length; i++) {
             screenShootsDiv[i].alt = "screenshoot";
             screenShootsDiv[i].src = game.screenShootsSrc[i];
+            screenShootsDiv[i].setAttribute("onmouseover", `changePortrait(this, '${temp.id}')`); // Add onmouseover event
+            screenShootsDiv[i].setAttribute("onmouseleave", "rstPortrait()"); // Add onmouseleave event
             NEW_SCREEN_SHOOTS.appendChild(screenShootsDiv[i]);
         }
 
@@ -129,7 +131,24 @@ function updatePanelsContainer() {
 
     });
 
+    // Add "Coming Soon" panel
+    const COMING_SOON_PANEL = document.createElement("div");
+    COMING_SOON_PANEL.classList.add("my-panel");
 
+    const COMING_SOON_DESCRIPTION = document.createElement("div");
+    COMING_SOON_DESCRIPTION.classList.add("game-description");
+
+    const COMING_SOON_TITLE = document.createElement("h2");
+    COMING_SOON_TITLE.classList.add("description-title");
+    COMING_SOON_TITLE.innerHTML = "Coming soon...";
+
+    const COMING_SOON_TEXT = document.createElement("p");
+    COMING_SOON_TEXT.innerHTML = "More games coming soon";
+
+    COMING_SOON_DESCRIPTION.appendChild(COMING_SOON_TITLE);
+    COMING_SOON_DESCRIPTION.appendChild(COMING_SOON_TEXT);
+    COMING_SOON_PANEL.appendChild(COMING_SOON_DESCRIPTION);
+    CONTAINER.appendChild(COMING_SOON_PANEL);
 }
 
 updatePanelsContainer();

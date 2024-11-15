@@ -8,6 +8,7 @@ let scrollPosition = 0; //actual focused panel
 window.onload = () => {
     //wait for the page to be totally loaded and update panels
     updatePanelsPosition();
+    scrollTo(0, 0);
 };
 
 function handleScroll(event) {

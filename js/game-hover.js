@@ -1,11 +1,13 @@
 var originalPortrait;
-    var portraitDisplay;
-    function changePortrait(element, portraitId) {
-      var newImage = element.src;
-      portraitDisplay = document.getElementById(portraitId);
-      originalPortrait = portraitDisplay.src;
-      portraitDisplay.src = newImage;
+var portraitDisplay;
+
+function changePortrait(element, portraitId) {
+    const portrait = document.getElementById(portraitId);
+    if (portrait) {
+        portrait.src = element.src;
     }
-    function rstPortrait() {
-      portraitDisplay.src = originalPortrait;
-    }
+}
+
+function rstPortrait() {
+    // Logic to reset the portrait image if needed
+}

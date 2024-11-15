@@ -4,7 +4,6 @@
 }
 
 .game-title h1 {
-    font-size: auto;
     text-decoration: underline;
     font-style: italic;
 }
@@ -15,10 +14,6 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-}
-
-.game-imgs {
-    margin: auto;
 }
 
 .portrait {

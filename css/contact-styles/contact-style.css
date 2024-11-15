@@ -23,24 +23,19 @@ label {
     background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
     border: 5px solid rgba(20, 128, 20, 0.5);
     border-radius: 10px;
-    padding-left: 50px;
-    padding-top: 10px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .msg-type label {
-    padding: 0;
+    margin-top: 0;
+    font-size: 14px;
+    color: black;
 }
 
-.msg-type p {
-    color: rgb(21, 24, 21);
-    font-size: 14px;
-}
 
 #message-box {
-    display: flex;
-    margin-right: 20px;
-    height: 125px;
+    height: 190px;
 }
 
 .row-align {
@@ -63,8 +58,8 @@ label {
     background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
     border: 5px solid rgb(20, 128, 20);
     border-radius: 15px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 20px;
 }
 
@@ -99,16 +94,34 @@ label {
 
 /* Messages displayer */
 .sent-msgs-container{
+    background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(166, 211, 166));
+    border: 5px solid rgb(139, 139, 139);
+    border-radius: 15px;
     display: flex;
-    flex-direction: col;
+    flex-direction: column;
     flex-wrap: nowrap;
 
-    border: 5px solid rgb(20, 128, 20);
     width: 100%;
     height: 100%;
     overflow-y: auto;
+    padding: 10px;
 }
 
+.sent-msg {
+    height: fit-content;
+    width: 100%;
+    border: 5px solid rgb(139, 139, 139);    
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.sent-msg p {
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+    color: black;
+    text-align: left;
+}
 
 
 /* Social media styles */

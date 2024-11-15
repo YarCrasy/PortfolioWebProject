@@ -53,20 +53,14 @@
           <!-- Type of message -->
           <label>Type of message:</label><br>
           <div class="msg-type" id="msg-type">
-            <input type="radio" id="bug-report" name="msg-type" value="HTML">
-            <label for="bug-report">
-              <p>bug report</p>
-            </label><br>
+            <input type="radio" id="bug-report" name="msg-type" value="report">
+            <label for="bug-report">bug report</label><br>
 
-            <input type="radio" id="bussiness" name="msg-type" value="CSS">
-            <label for="bussiness">
-              <p>bussiness</p>
-            </label><br>
+            <input type="radio" id="bussiness" name="msg-type" value="bussiness">
+            <label for="bussiness">bussiness</label><br>
 
-            <input type="radio" id="other" name="msg-type" value="JavaScript">
-            <label for="other">
-              <p>other</p>
-            </label><br>
+            <input type="radio" id="other" name="msg-type" value="other">
+            <label for="other">other</label><br>
           </div>
 
           <!-- Message, temrs and submit buton -->
@@ -91,8 +85,7 @@
 
           <div id="submit-success-msg">
             <p>
-              Submit success, I will contact you from the provided Email. <br>
-              Check the sent message in the panel below. <br>
+              Submit success, Check the sent message in the panel below. <br>
               ↓
             </p>
           </div>
@@ -103,11 +96,9 @@
       <!-- sent message -->
       <div class="my-panel">
         <h1>Sent Message</h1>
-        <div class="sent-msgs-container">
-          <div class="sent-msg">
-            <p>Email: </p>
-            <p>Message: </p>
-            <p>Type: </p>
+        <div class="sent-msgs-container" id="sent-msgs-container">
+          <div class="sent-email">
+
           </div>
         </div>
       </div>

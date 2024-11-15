@@ -17,7 +17,7 @@ function validateEmail(event) {
 
     //check email
     if (!EMAIL || !EMAIL_REGEX.test(EMAIL) || !MSG_TYPE || !MSG_2_SEND || !CHECKBOX) {
-        
+
         if (!EMAIL || !EMAIL_REGEX.test(EMAIL)) {
             if (!EMAIL) {
                 showError("email", "empty email");
@@ -51,8 +51,7 @@ function validateEmail(event) {
         if (!CHECKBOX) {
             showError("checkbox", "please agree to the terms");
         }
-        else
-        {
+        else {
             aux = document.getElementById("terms-p");
             aux.style.color = "rgb(189, 209, 193)";
         }
@@ -62,8 +61,8 @@ function validateEmail(event) {
         aux.style.borderColor = "rgba(128, 20, 20, 0.5)";
     }
     else {
-        saveFormData(EMAIL, MSG_TYPE, MSG_2_SEND);
         showSuccessMsg();
+        saveFormData(EMAIL, MSG_TYPE, MSG_2_SEND);
     }
 
 }
@@ -91,7 +90,7 @@ function showSuccessMsg() {
 
     let aux = document.getElementById("terms-p");
     aux.style.color = "rgb(189, 209, 193)";
-    
+
     aux = document.getElementById("submit-btn");
     aux.style.backgroundImage = "linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136))";
     aux.style.borderColor = "rgba(20, 128, 20, 0.5)"
@@ -102,7 +101,7 @@ function showSuccessMsg() {
     }, 5000);
 }
 
-function rstTermsColor(){
+function rstTermsColor() {
     const TXT = document.getElementById("terms-p");
     TXT.style.color = "rgb(189, 209, 193)";
 }
@@ -114,12 +113,34 @@ function rstFormColor(elementId) {
 }
 
 function saveFormData(email, msgType, msg) {
-    const formData = {
-        email: email,
-        msgType: msgType,
-        msg: msg
-    };
-    localStorage.setItem('contactFormData', JSON.stringify(formData));
+    localStorage.setItem("email", email);
+    localStorage.setItem("msgType", msgType);
+    localStorage.setItem("msg", msg);
+
+    const FORM = document.getElementById("msg-form");
+    FORM.reset();
+    showFormData();
+}
+
+//show form data at set message panel
+function showFormData() {
+    const EMAIL = localStorage.getItem("email");
+    const MSG_TYPE = localStorage.getItem("msgType");
+    const MSG = localStorage.getItem("msg");
+
+    const MSGS_CONTAINER = document.getElementById("sent-msgs-container");
+    let aux = document.createElement("div");
+    aux.classList.add("sent-msg");
+    MSGS_CONTAINER.appendChild(aux);
+    aux.innerHTML = `<div class="by">
+            <p>By: ${EMAIL}</p>
+        </div>
+        <div class="sent-type">
+            <p>Type: ${MSG_TYPE}</p>
+        </div>
+        <div class="msg">
+            <p>Message:<br>${MSG}</p>
+        </div>`;
 }
 
 initValidation();
