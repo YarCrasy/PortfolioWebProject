@@ -144,3 +144,4 @@ function showFormData() {
 }
 
 initValidation();
+showFormData();
