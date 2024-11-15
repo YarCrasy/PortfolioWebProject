@@ -128,19 +128,22 @@ function showFormData() {
     const MSG_TYPE = localStorage.getItem("msgType");
     const MSG = localStorage.getItem("msg");
 
-    const MSGS_CONTAINER = document.getElementById("sent-msgs-container");
-    let aux = document.createElement("div");
-    aux.classList.add("sent-msg");
-    MSGS_CONTAINER.appendChild(aux);
-    aux.innerHTML = `<div class="by">
-            <p>By: ${EMAIL}</p>
-        </div>
-        <div class="sent-type">
-            <p>Type: ${MSG_TYPE}</p>
-        </div>
-        <div class="msg">
-            <p>Message:<br>${MSG}</p>
-        </div>`;
+    if(EMAIL || MSG_TYPE || MSG){
+        const MSGS_CONTAINER = document.getElementById("sent-msgs-container");
+        let aux = document.createElement("div");
+        aux.classList.add("sent-msg");
+        MSGS_CONTAINER.appendChild(aux);
+        aux.innerHTML = `<div class="by">
+                <p>By: ${EMAIL}</p>
+            </div>
+            <div class="sent-type">
+                <p>Type: ${MSG_TYPE}</p>
+            </div>
+            <div class="msg">
+                <p>Message:<br>${MSG}</p>
+            </div>`;
+    }
+
 }
 
 initValidation();
