@@ -1,12 +1,12 @@
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
     .portrait {
         height: 30vw;
     }
 
     .screenshoots {
         height: 10vw;
+
         border: 3px solid rgb(75, 43, 66);
     }
 
@@ -14,19 +14,15 @@
         margin-top: 0;
         width: 100%;
     }
-    
 
     .game-imgs {
         margin-top: auto;
         margin-bottom: auto;
     }
-
 }
-
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
     .horizontal-display {
         display: flex;
         flex-direction: row;
@@ -46,8 +42,9 @@
 
     .game-description {
         margin-top: 0;
+        margin-left: 10px;
+
         height: 100%;
         border: 3px solid rgb(75, 43, 66);
-        margin-left: 10px;
     }
 }

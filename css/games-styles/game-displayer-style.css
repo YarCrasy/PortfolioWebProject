@@ -10,20 +10,23 @@
 
 .horizontal-display {
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+
+    height: 100%;
 }
 
 .portrait {
-    height: 40vw;
     display: flex;
     justify-content: center;
+
+    height: 40vw;
 }
 
 .portrait img {
     flex-shrink: 1;
+
     height: 100%;
     width: max-content;
 }
@@ -33,16 +36,17 @@
     flex-direction: row;
     flex-wrap: nowrap;
     flex-shrink: 0;
+    padding: 10px;
+    overflow-x: auto;
+
     height: 15vw;
     width: 100%;
-    padding: 10px;
-
-    overflow-x: auto;
 }
 
 .screenshoot {
     display: flex;
     flex-shrink: 0;
+
     border: 3px solid rgb(75, 43, 66);
 }
 
@@ -52,10 +56,10 @@
 
 .game-description {
     margin-top: 10px;
-    height: 100%;
     text-align: left;
-
     overflow-y: auto;
+
+    height: 100%;
 }
 
 .description-title {

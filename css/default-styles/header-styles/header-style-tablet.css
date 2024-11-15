@@ -1,6 +1,5 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
     .web-title {
         display: none;
     }
@@ -11,15 +10,17 @@
 
     .header-sections {
         display: flex;
+        justify-content: space-evenly;
+
         height: 100%;
         width: 100%;
-        justify-content: space-evenly;
     }
 
     .header-section {
-        height: 100%;
         display: flex;
         flex-direction: column;
+
+        height: 100%;
     }
 
     .header-section p {
@@ -29,5 +30,4 @@
     .header-menu-button {
         display: none;
     }
-
 }
