@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <!--inspired in:-->
 <!--https://dribbble.com/shots/23895796-Wegrow-design-->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yar's Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="../imgs/icon-imgs/lcj-icon.jpg">
+  <title>Portafolio de Yar</title>
+  <link rel="icon" type="image/x-icon" href="../../imgs/icon-imgs/lcj-icon.jpg">
 
   <!--Default Styles-->
   <!-- bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="../css/default-styles/bootstrap-mod-style.css">
+  <link rel="stylesheet" href="../../css/default-styles/bootstrap-mod-style.css">
 
   <!-- My Styles -->
-  <link rel="stylesheet" href="../css/default-styles/body-styles/body-style.css">
-  <link rel="stylesheet" href="../css/default-styles/header-styles/header-style-default.css">
-  <link rel="stylesheet" href="../css/default-styles/header-styles/header-style-tablet.css">
-  <link rel="stylesheet" href="../css/default-styles/header-styles/header-style-pc.css">
-  <link rel="stylesheet" href="../css/default-styles/FooterStyle.css">
+  <link rel="stylesheet" href="../../css/default-styles/body-styles/body-style.css">
+  <link rel="stylesheet" href="../../css/default-styles/header-styles/header-style-default.css">
+  <link rel="stylesheet" href="../../css/default-styles/header-styles/header-style-tablet.css">
+  <link rel="stylesheet" href="../../css/default-styles/header-styles/header-style-pc.css">
+  <link rel="stylesheet" href="../../css/default-styles/FooterStyle.css">
 
   <!--Additional Styles-->
-  <link rel="stylesheet" href="../css/contact-styles/contact-style.css">
-  <link rel="stylesheet" href="../css/contact-styles/contact-media-q-style.css">
-  <link rel="stylesheet" href="../css/default-styles/body-styles/panel-style.css">
+  <link rel="stylesheet" href="../../css/contact-styles/contact-style.css">
+  <link rel="stylesheet" href="../../css/contact-styles/contact-media-q-style.css">
+  <link rel="stylesheet" href="../../css/default-styles/body-styles/panel-style.css">
 </head>
 
 <body>
@@ -42,50 +42,50 @@
 
       <!--Contact Form-->
       <div class="my-panel">
-        <h1>Send Message</h1>
+        <h1>Enviar Mensaje</h1>
         <form id="msg-form">
           <!-- contact email -->
           <div class="form-item">
-            <label for="email">Email:</label>
-            <input type="text" class="input-field" id="email" placeholder="Enter email" name="email">
+            <label for="email">Correo Electrónico:</label>
+            <input type="text" class="input-field" id="email" placeholder="Ingrese correo electrónico" name="email">
           </div>
 
           <!-- Type of message -->
-          <label>Type of message:</label><br>
+          <label>Tipo de mensaje:</label><br>
           <div class="msg-type" id="msg-type">
             <input type="radio" id="bug-report" name="msg-type" value="report">
-            <label for="bug-report">bug report</label><br>
+            <label for="bug-report">reportar error</label><br>
 
             <input type="radio" id="bussiness" name="msg-type" value="bussiness">
-            <label for="bussiness">bussiness</label><br>
+            <label for="bussiness">negocios</label><br>
 
             <input type="radio" id="other" name="msg-type" value="other">
-            <label for="other">other</label><br>
+            <label for="other">otros</label><br>
           </div>
 
           <!-- Message, temrs and submit buton -->
           <div class="form-item">
-            <label for="message-box">Message:</label>
+            <label for="message-box">Mensaje:</label>
             <textarea class="input-field" id="message-box" name="message"
-              placeholder="What do you want to tell me?"></textarea>
+              placeholder="¿Digame?"></textarea>
           </div>
 
           <div class="row-align">
             <div class="submit-btn">
-              <button type="submit" id="submit-btn">Send</button>
+              <button type="submit" id="submit-btn">Enviar</button>
             </div>
 
             <div class="temrs-conditions">
               <input type="checkbox" id="temrs" name="temrs-checkbox" value="accept">
               <label for="temrs-checkbox">
-                <p id="terms-p">I accept term and conditions</p>
+                <p id="terms-p">Acepto términos y condiciones</p>
               </label>
             </div>
           </div>
 
           <div id="submit-success-msg">
             <p>
-              Submit success, Check the sent message in the panel below. <br>
+              Envío exitoso, revisa el mensaje enviado en el panel de abajo. <br>
               ↓
             </p>
           </div>
@@ -95,7 +95,7 @@
 
       <!-- sent message -->
       <div class="my-panel">
-        <h1>Sent Message</h1>
+        <h1>Mensaje Enviado</h1>
         <div class="sent-msgs-container" id="sent-msgs-container">
           <div class="sent-email">
 
@@ -106,13 +106,13 @@
 
       <!--Social Media-->
       <div class="my-panel">
-        <h1>Social Media</h1>
+        <h1>Redes Sociales</h1>
         <div class="media-container">
           <!--GitHub-->
           <div class="social-media">
             <a href="https://github.com/YarCrasy">
               <div class="media-icon">
-                <img src="../imgs/icon-imgs/github-icon.svg" alt="Github-Icon">
+                <img src="../../imgs/icon-imgs/github-icon.svg" alt="Github-Icon">
               </div>
               <div class="media-name">
                 <p>Github</p>
@@ -124,7 +124,7 @@
           <div class="social-media">
             <a href="https://www.youtube.com/@Yar-Crasy">
               <div class="media-icon">
-                <img src="../imgs/icon-imgs/youtube-icon.svg" alt="Github-Icon">
+                <img src="../../imgs/icon-imgs/youtube-icon.svg" alt="Github-Icon">
               </div>
               <div class="media-name">
                 <p>YouTube</p>
@@ -136,7 +136,7 @@
           <div class="social-media">
             <a href="https://www.linkedin.com/in/jlc-gamedev/">
               <div class="media-icon">
-                <img src="../imgs/icon-imgs/linkedin-icon.svg" alt="Github-Icon">
+                <img src="../../imgs/icon-imgs/linkedin-icon.svg" alt="Github-Icon">
               </div>
               <div class="media-name">
                 <p>LinkedIn</p>
@@ -152,10 +152,10 @@
   <!--Footer area-->
   <footer id="footer"></footer>
 
-  <script src="../js/add-html-components.js"></script>
-  <script src="../js/parallax-scroll.js"></script>
-  <script src="../js/contact-scripts/contact-form.js"></script>
-  <script src="../js/contact-scripts/show-msg.js"></script>
+  <script src="../../js/add-html-components.js"></script>
+  <script src="../../js/parallax-scroll.js"></script>
+  <script src="../../js/contact-scripts/contact-form.js"></script>
+  <script src="../../js/contact-scripts/show-msg.js"></script>
 
 </body>
 

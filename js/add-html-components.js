@@ -7,5 +7,5 @@ function addComponent(path, elementId) {
         .catch(error => console.error(elementId + "", error));
 }
 
-addComponent("../html/html-components/header.html", "header");
-addComponent("../html/html-components/footer.html", "footer");
+addComponent("../../html/html-components/header.html", "header");
+addComponent("../../html/html-components/footer.html", "footer");
