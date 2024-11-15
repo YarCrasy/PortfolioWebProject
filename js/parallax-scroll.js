@@ -7,7 +7,7 @@ let scrollPosition = 0; //actual focused panel
 
 window.onload = () => {
     //wait for the page to be totally loaded and update panels
-    updatePanelsPosition();
+    updatePanelsState();
     scrollTo(0, 0);
 };
 
@@ -19,13 +19,16 @@ function handleScroll(event) {
     //add or substract the actual index position
     scrollPosition += event.deltaY / 100;
     //limit scroll
-    scrollPosition = Math.max(0, Math.min(PANELS.length - 1, scrollPosition));
+    if(scrollPosition < 0) scrollPosition = 0;
+    else if (scrollPosition >= PANELS.length)scrollPosition = PANELS.length - 1;
+
+    //set view to the actual panel
     window.scrollTo({ top: PANELS[scrollPosition].offsetTop, });
 
-    updatePanelsPosition();
+    updatePanelsState();
 }
 
-function updatePanelsPosition() {
+function updatePanelsState() {
     const PANELS = document.querySelectorAll(".my-panel");
 
     for (let i = 0; i < PANELS.length; i++) {
@@ -35,5 +38,6 @@ function updatePanelsPosition() {
         PANELS[i].style.opacity = opacity;
     }
 }
+
 
 window.addEventListener('wheel', handleScroll, { passive: false });
