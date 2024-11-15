@@ -9,14 +9,14 @@
 <p>
  This project is a part of a school project to make a simple web page for LND, but also is my portfolio to show my others project, mainly <b>game projects</b>.
 </p>
-<p>The web is actually hosted <a href="https://yarcrasy.github.io/PortfolioWebProject/html/games.html">here</a> with Github Pages</p>
+<p>The web is actually hosted <a href="https://yarcrasy.github.io/PortfolioWebProject/html/en/index.html">here</a> with Github Pages</p>
 
 <b>IMPORTANT NOTE</b>
 <p>
 Header and footer need to be in a server to show out, please host the page in a server to view al the content.
 </p>
 
-## Changelog v1.2
+## Changelog v1.2.1
  * minor changes to readme and added a changelog to it
  * modified game-panels to my-panels to reuse them in other sites
  * added scroll effect for panels
@@ -25,6 +25,7 @@ Header and footer need to be in a server to show out, please host the page in a 
  * used offcanvas for header in mobile (default) view
  * added social media in contact html
  * added contact form in contact html (note that the data entered will not be sent to anyother site)
+ * added language selections
 
  ## Build with
  For now, the project is made with: 
