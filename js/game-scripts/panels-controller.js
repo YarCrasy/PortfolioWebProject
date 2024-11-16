@@ -2,7 +2,9 @@
 const gamesData = [
     {
         title: "Space Maze",
-        description: "You will play as Gabe, a engineer working in a cosmic warehouse, isolated because others went for vacation. In one of this days, you heard a strong noise and the light is cut off.",
+        descriptionEn: "You will play as Gabe, a engineer working in a cosmic warehouse, isolated because others went for vacation. In one of this days, you heard a strong noise and the light is cut off.",
+        descriptionEs: "Jugarás como Gabe, un ingeniero que trabaja en un almacén cósmico, aislado porque los demás se fueron de vacaciones. En uno de estos días, escuchaste un fuerte ruido y se cortó la luz.",
+        descriptionZh: "你将扮演Gabe，一个在宇宙仓库工作的工程师，因为其他人去度假而被孤立。在这一天，你听到了一声巨响，灯光熄灭了。",
         portraitSrc: "../../imgs/game-imgs/space-maze/portrait-sm.png",
         screenShootsSrc: [
             "../../imgs/game-imgs/space-maze/sm-screenshot1.png",
@@ -17,7 +19,9 @@ const gamesData = [
     },
     {
         title: "Paper Pong",
-        description: "A simple pong with a paper heart.",
+        descriptionEn: "A simple pong with a paper heart.",
+        descriptionEs: "Un pong simple con un corazón de papel.",
+        descriptionZh: "一个简单的纸心乒乓球游戏。",
         portraitSrc: "../../imgs/game-imgs/paper-pong/portrait-ppong.png",
         screenShootsSrc: [
             "../../imgs/game-imgs/paper-pong/ppong-screenshot1.png",
@@ -34,7 +38,9 @@ const gamesData = [
     },
     {
         title: "Lucid Dream",
-        description: "A game made for the IlloJam 2024.\nMade in colaboration with: Laila Lahmami, Alejandro Rodriguez, Lydia Morant, Pau Gisbert.\nOh no! You fell asleep watching an IlloJuan stream and can't wake up. Try to wake up again before you can't scape! Walk through the maze and solve puzzles to recover the pieces of memories hidden in the most bizarre mini-games.",
+        descriptionEn: "A game made for the IlloJam 2024.\nMade in colaboration with: Laila Lahmami, Alejandro Rodriguez, Lydia Morant, Pau Gisbert.\nOh no! You fell asleep watching an IlloJuan stream and can't wake up. Try to wake up again before you can't scape! Walk through the maze and solve puzzles to recover the pieces of memories hidden in the most bizarre mini-games.",
+        descriptionEs: "Un juego hecho para el IlloJam 2024.\nHecho en colaboración con: Laila Lahmami, Alejandro Rodriguez, Lydia Morant, Pau Gisbert.\n¡Oh no! Te quedaste dormido viendo una transmisión de IlloJuan y no puedes despertar. Intenta despertarte de nuevo antes de que no puedas escapar. Camina por el laberinto y resuelve acertijos para recuperar las piezas de recuerdos escondidas en los mini-juegos más extraños.",
+        descriptionZh: "为IlloJam 2024制作的游戏。\n与Laila Lahmami, Alejandro Rodriguez, Lydia Morant, Pau Gisbert合作制作。\n哦不！你在看IlloJuan的直播时睡着了，无法醒来。试着再次醒来，否则你将无法逃脱！穿过迷宫并解决谜题，找回隐藏在最奇异的迷你游戏中的记忆碎片。",
         portraitSrc: "../../imgs/game-imgs/lucid-dream/portrait-ldream.png",
         screenShootsSrc: [
             "../../imgs/game-imgs/lucid-dream/ldream-screenshot1.jpg",
@@ -126,7 +132,15 @@ function updatePanelsContainer() {
         NEW_DESCRIPTION.appendChild(temp);
 
         temp = document.createElement("p");
-        temp.innerHTML = game.description;
+        if(document.documentElement.lang === "es"){
+            temp.innerHTML = game.descriptionEs;
+        }
+        else if(document.documentElement.lang === "zh"){
+            temp.innerHTML = game.descriptionZh;
+        }
+        else{
+            temp.innerHTML = game.descriptionEn;
+        }
         NEW_DESCRIPTION.appendChild(temp);
 
     });

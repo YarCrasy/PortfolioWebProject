@@ -25,7 +25,9 @@ Header and footer need to be in a server to show out, please host the page in a 
  * used offcanvas for header in mobile (default) view
  * added social media in contact html
  * added contact form in contact html (note that the data entered will not be sent to anyother site)
- * added language selections
+ * moved default html files to html>en
+ * added htmls for other languages
+ * added language selection
 
  ## Build with
  For now, the project is made with: 
@@ -34,9 +36,9 @@ Header and footer need to be in a server to show out, please host the page in a 
  * Javascript
 
 ## Composition
-the web is currently made with 6 HTML files:
+the web is currently made with 6 HTML files (18 files with other languages):
 <p>
-4 main files:
+4 main files in:
 </p>
   * Index: where is the main web page.
   * Game: where is posible to find all my game projects
