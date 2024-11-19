@@ -40,7 +40,7 @@ const gamesData = [
         title: "Lucid Dream",
         descriptionEn: "A game made for the IlloJam 2024.\nMade in colaboration with: Laila Lahmami, Alejandro Rodriguez, Lydia Morant, Pau Gisbert.\nOh no! You fell asleep watching an IlloJuan stream and can't wake up. Try to wake up again before you can't scape! Walk through the maze and solve puzzles to recover the pieces of memories hidden in the most bizarre mini-games.",
         descriptionEs: "Un juego hecho para el IlloJam 2024.\nHecho en colaboración con: Laila Lahmami, Alejandro Rodriguez, Lydia Morant, Pau Gisbert.\n¡Oh no! Te quedaste dormido viendo una transmisión de IlloJuan y no puedes despertar. Intenta despertarte de nuevo antes de que no puedas escapar. Camina por el laberinto y resuelve acertijos para recuperar las piezas de recuerdos escondidas en los mini-juegos más extraños.",
-        descriptionZh: "为IlloJam 2024制作的游戏。\n与Laila Lahmami, Alejandro Rodriguez, Lydia Morant, Pau Gisbert合作制作。\n哦不！你在看IlloJuan的直播时睡着了，无法醒来。试着再次醒来，否则你将无法逃脱！穿过迷宫并解决谜题，找回隐藏在最奇异的迷你游戏中的记忆碎片。",
+        descriptionZh: "为IlloJam 2024制作的游戏。\n与Laila Lahmami, Alejandro Rodriguez, Lydia Morant, Pau Gisbert合作制作。\n不好啦！你在看IlloJuan的直播时睡着了，无法醒来。试着再次醒来，否则你将无法逃脱！穿过迷宫并解决谜题，找回隐藏在最奇异的迷你游戏中的记忆碎片。",
         portraitSrc: "../../imgs/game-imgs/lucid-dream/portrait-ldream.png",
         screenShootsSrc: [
             "../../imgs/game-imgs/lucid-dream/ldream-screenshot1.jpg",
@@ -61,6 +61,8 @@ const gamesData = [
 
 function updatePanelsContainer() {
     const CONTAINER = document.getElementById("panels-container");
+
+    
 
     gamesData.forEach(game => {
         //create all divs needed

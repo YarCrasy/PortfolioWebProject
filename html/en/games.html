@@ -26,6 +26,9 @@
   <link rel="stylesheet" href="../../css/games-styles/game-displayer-style.css">
   <link rel="stylesheet" href="../../css/games-styles/game-media-q-style.css">
   <link rel="stylesheet" href="../../css/default-styles/body-styles/panel-style.css">
+
+  <!--Unity Styles-->
+  <link rel="stylesheet" href="../../games-build/infinite-runner/TemplateData/style.css">
 </head>
 
 <body>
@@ -37,7 +40,44 @@
   <!--Content area-->
   <div class="contents">
     <div class="panels-container" id="panels-container">
-      <!-- Remove hardcoded Space Maze panel -->
+
+      <div class="my-panel">
+        <div class="game-title">
+          <h1>Infinite Runner</h1>
+        </div>
+
+      <div class="horizontal-display">
+        <div class="game-container" id="inf-runner-conatiner">
+
+          <div id="unity-container" class="unity-desktop">
+            <canvas id="unity-canvas" tabindex="-1"></canvas>
+            <div id="unity-loading-bar">
+              <div id="unity-logo"></div>
+              <div id="unity-progress-bar-empty">
+                <div id="unity-progress-bar-full"></div>
+              </div>
+            </div>
+            <div id="unity-warning"> </div>
+            <div id="unity-footer">
+              <div id="unity-fullscreen-button"></div>
+              <div id="unity-build-title">EjInfiniteRunner</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-description">
+          <h2 class="description-title">Description</h2>
+          <p>
+            move with w s and jump with space.
+          </p>
+          <p>
+            a simple example of a infinite runner game.
+          </p>
+        </div>
+
+      </div>
+      </div>
+
     </div>
   </div>
 
@@ -52,6 +92,8 @@
     <script src="../../js/game-hover.js"></script>
     <script src="../../js/game-scripts/panels-controller.js"></script>
     <script src="../../js/parallax-scroll.js"></script>
+    
+    <script src="../../js/game-scripts/unity-integration/inf-runner.js"></script>
   </div>
 
 </body>

@@ -17,6 +17,9 @@
     height: 100%;
 }
 
+.game-container{
+}
+
 .portrait {
     display: flex;
     justify-content: center;
@@ -65,3 +68,4 @@
 .description-title {
     text-align: center;
 }
+
