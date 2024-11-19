@@ -26,6 +26,9 @@
   <link rel="stylesheet" href="../../css/games-styles/game-displayer-style.css">
   <link rel="stylesheet" href="../../css/games-styles/game-media-q-style.css">
   <link rel="stylesheet" href="../../css/default-styles/body-styles/panel-style.css">
+
+  <!--Unity Styles-->
+  <link rel="stylesheet" href="../../games-build/infinite-runner/TemplateData/style.css">
 </head>
 
 <body>
@@ -43,9 +46,11 @@
           <h1>Infinite Runner</h1>
         </div>
 
-        <div class="game-container">
+      <div class="horizontal-display">
+        <div class="game-container" id="inf-runner-conatiner">
+
           <div id="unity-container" class="unity-desktop">
-            <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+            <canvas id="unity-canvas" tabindex="-1"></canvas>
             <div id="unity-loading-bar">
               <div id="unity-logo"></div>
               <div id="unity-progress-bar-empty">
@@ -54,13 +59,23 @@
             </div>
             <div id="unity-warning"> </div>
             <div id="unity-footer">
-              <div id="unity-logo-title-footer"></div>
               <div id="unity-fullscreen-button"></div>
               <div id="unity-build-title">EjInfiniteRunner</div>
             </div>
           </div>
         </div>
 
+        <div class="game-description">
+          <h2 class="description-title">Description</h2>
+          <p>
+            move with w s and jump with space.
+          </p>
+          <p>
+            a simple example of a infinite runner game.
+          </p>
+        </div>
+
+      </div>
       </div>
 
     </div>
@@ -77,73 +92,8 @@
     <script src="../../js/game-hover.js"></script>
     <script src="../../js/game-scripts/panels-controller.js"></script>
     <script src="../../js/parallax-scroll.js"></script>
-    <script>
-      var canvas = document.querySelector("#unity-canvas");
-
-      function unityShowBanner(msg, type) {
-        var warningBanner = document.querySelector("#unity-warning");
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
-
-      var buildUrl = "../../games-build/infinite-runner/Build";
-      var loaderUrl = buildUrl + "/26a8ee92bb988938ff747c3cc7af8eeb.loader.js";
-      var config = {
-        arguments: [],
-        dataUrl: buildUrl + "/15b572ba7569161b9a8509baa48eba5a.data",
-        frameworkUrl: buildUrl + "/9ff9c198ff086a5fad13bb9a021b703b.framework.js",
-        codeUrl: buildUrl + "/d5ede4017a69329b50c7af85b36ddecd.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "EjerecicioInfRunner",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
-      };
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        document.querySelector("#unity-container").className = "unity-mobile";
-        canvas.className = "unity-mobile";
-      } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
-
-      document.querySelector("#unity-loading-bar").style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          document.querySelector("#unity-loading-bar").style.display = "none";
-          document.querySelector("#unity-fullscreen-button").onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-
-      document.body.appendChild(script);
-    </script>
+    
+    <script src="../../js/game-scripts/unity-integration/inf-runner.js"></script>
   </div>
 
 </body>
