@@ -1,0 +1,21 @@
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .language-container {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        height: 100%;
+        width: 10vw;
+    }
+
+    .wide-view {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .dropbtn {
+        display: none;
+    }
+}

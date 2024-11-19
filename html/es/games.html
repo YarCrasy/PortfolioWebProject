@@ -20,12 +20,16 @@
   <link rel="stylesheet" href="../../css/default-styles/header-styles/header-style-default.css">
   <link rel="stylesheet" href="../../css/default-styles/header-styles/header-style-tablet.css">
   <link rel="stylesheet" href="../../css/default-styles/header-styles/header-style-pc.css">
-  <link rel="stylesheet" href="../../css/default-styles/FooterStyle.css">
+  <link rel="stylesheet" href="../../css/default-styles/footer-styles/footer-style.css">
+  <link rel="stylesheet" href="../../css/default-styles/footer-styles/footer-style-tablet.css">
+  <link rel="stylesheet" href="../../css/default-styles/footer-styles/footer-style-pc.css">
 
   <!--Additional Styles-->
   <link rel="stylesheet" href="../../css/games-styles/game-displayer-style.css">
   <link rel="stylesheet" href="../../css/games-styles/game-media-q-style.css">
   <link rel="stylesheet" href="../../css/default-styles/body-styles/panel-style.css">
+  <!--Unity Styles-->
+  <link rel="stylesheet" href="../../games-build/infinite-runner/TemplateData/style.css">
 </head>
 
 <body>
@@ -37,7 +41,42 @@
   <!--Content area-->
   <div class="contents">
     <div class="panels-container" id="panels-container">
+      <div class="my-panel">
+        <div class="game-title">
+          <h1>Infinite Runner</h1>
+        </div>
 
+        <div class="horizontal-display">
+          <div class="game-container" id="inf-runner-conatiner">
+
+            <div id="unity-container" class="unity-desktop">
+              <canvas id="unity-canvas" tabindex="-1"></canvas>
+              <div id="unity-loading-bar">
+                <div id="unity-logo"></div>
+                <div id="unity-progress-bar-empty">
+                  <div id="unity-progress-bar-full"></div>
+                </div>
+              </div>
+              <div id="unity-warning"> </div>
+              <div id="unity-footer">
+                <div id="unity-fullscreen-button"></div>
+                <div id="unity-build-title">EjInfiniteRunner</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-description">
+            <h2 class="description-title">Descripción</h2>
+            <p>
+              muévete con w s y salta con espacio.
+            </p>
+            <p>
+              un ejemplo simple de un juego de corredor infinito.
+            </p>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 
@@ -52,6 +91,7 @@
     <script src="../../js/game-hover.js"></script>
     <script src="../../js/game-scripts/panels-controller.js"></script>
     <script src="../../js/parallax-scroll.js"></script>
+    <script src="../../js/game-scripts/unity-integration/inf-runner.js"></script>
   </div>
 
 </body>
