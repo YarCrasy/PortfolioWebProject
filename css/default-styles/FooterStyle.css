@@ -37,10 +37,10 @@ footer {
     border: 1px solid rgb(20, 128, 20);
     border-radius: 15px;
     color: white;
-    padding: 15px;
+    padding: 10px;
     font-size: 16px;
     color: black;
-    width: 200px;
+    width: 170px;
 }
 
 .dropup {
@@ -85,6 +85,10 @@ footer {
     background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(151, 224, 151), rgb(103, 218, 103));
 }
 
+.wide-view {
+    display: none;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {}
 
@@ -93,7 +97,15 @@ footer {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+    .wide-view {
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+    }
+
     .dropbtn {
+        display: none;
         background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(196, 228, 196));
         border: 1px solid rgb(20, 128, 20);
         border-radius: 15px;
