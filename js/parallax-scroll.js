@@ -4,6 +4,8 @@
 //and it fits better with my web instead of doing something weird
 
 let scrollPosition = 0; //actual focused panel
+let startY = 0; // starting Y position for touch
+
 
 window.onload = () => {
     //wait for the page to be totally loaded and update panels
@@ -16,11 +18,34 @@ function handleScroll(event) {
 
     //cancel default scroll
     event.preventDefault();
-    //add or substract the actual index position
+    //add or subtract the actual index position
     scrollPosition += event.deltaY / 100;
     //limit scroll
-    if(scrollPosition < 0) scrollPosition = 0;
-    else if (scrollPosition >= PANELS.length)scrollPosition = PANELS.length - 1;
+    if (scrollPosition < 0) scrollPosition = 0;
+    else if (scrollPosition >= PANELS.length) scrollPosition = PANELS.length - 1;
+
+    //set view to the actual panel
+    window.scrollTo({ top: PANELS[scrollPosition].offsetTop, });
+
+    updatePanelsState();
+}
+
+function handleTouchStart(event) {
+    startY = event.touches[0].clientY;
+}
+
+function handleTouchEnd(event) {
+    const PANELS = document.querySelectorAll(".my-panel");
+    //calculate the difference in touch position
+    const deltaY = startY - event.changedTouches[0].clientY;
+
+    //check if the movement is greater than the threshold
+    if (deltaY > 0) scrollPosition += 1;
+    else scrollPosition -= 1;
+
+    //limit scroll
+    if (scrollPosition < 0) scrollPosition = 0;
+    else if (scrollPosition >= PANELS.length) scrollPosition = PANELS.length - 1;
 
     //set view to the actual panel
     window.scrollTo({ top: PANELS[scrollPosition].offsetTop, });
@@ -39,5 +64,6 @@ function updatePanelsState() {
     }
 }
 
-
 window.addEventListener('wheel', handleScroll, { passive: false });
+window.addEventListener('touchstart', handleTouchStart, { passive: false });
+window.addEventListener('touchend', handleTouchEnd, { passive: false });
