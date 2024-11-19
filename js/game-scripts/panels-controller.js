@@ -152,7 +152,6 @@ function updatePanelsContainer() {
     COMING_SOON_PANEL.classList.add("my-panel");
 
     const COMING_SOON_DESCRIPTION = document.createElement("div");
-    COMING_SOON_DESCRIPTION.classList.add("game-description");
 
     const COMING_SOON_TITLE = document.createElement("h2");
     COMING_SOON_TITLE.classList.add("description-title");
