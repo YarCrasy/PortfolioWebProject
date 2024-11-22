@@ -66,7 +66,7 @@ function updatePanelsContainer() {
 
     gamesData.forEach(game => {
         //create all divs needed
-        const NEW_PANEL = document.createElement("div");
+        const NEW_PANEL = document.createElement("section");
         NEW_PANEL.classList.add("my-panel");
 
         const NEW_TITLE = document.createElement("div");

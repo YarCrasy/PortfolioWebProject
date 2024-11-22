@@ -1,4 +1,5 @@
 #unity-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +27,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    display: none
 }
 
 #unity-logo {
@@ -58,7 +58,6 @@
 .unity-mobile #unity-footer {
     display: none
 }
-
 
 #unity-build-title {
     margin-right: 10px;

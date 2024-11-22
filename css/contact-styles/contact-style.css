@@ -149,3 +149,8 @@ label {
     flex-direction: column;
     margin: auto;
 }
+
+.social-media img {
+    width: 100%;
+    height: 100%;
+}
