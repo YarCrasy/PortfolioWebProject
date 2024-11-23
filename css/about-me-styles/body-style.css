@@ -1,0 +1,6 @@
+body {
+    background-image: url('../../imgs/parallax-imgs/night-sky-b-g-main.png');
+    background-size: cover;
+    background-position: center;
+    min-height: auto;
+}
