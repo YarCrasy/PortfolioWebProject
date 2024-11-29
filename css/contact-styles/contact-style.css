@@ -108,6 +108,7 @@ label {
     flex-wrap: nowrap;
     padding: 10px;
     overflow-y: auto;
+    overflow-x: hidden;
 
     width: 100%;
     height: 100%;
@@ -120,18 +121,57 @@ label {
     margin-bottom: 10px;
 
     width: 100%;
-    height: fit-content;
+    height: 30%;
     border: 5px solid rgb(139, 139, 139);
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
 }
 
-.sent-msg p {
-    padding: 10px;
+.sent-msg-data {
+    width: 95%;
+    overflow-y: auto;
+}
+
+.msg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.msg p {
+    word-break: break-all;
+}
+
+.sent-msg-data p {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
     margin: 0;
 
     font-size: 20px;
     color: black;
     text-align: left;
+}
+
+.sent-msg-ctrl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 5%;
+}
+
+
+.sent-msg-ctrl button {
+    padding: 0%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 80%;
+}
+
+.sent-msg-ctrl button:hover {
+    transform: scale(1.1);
 }
 
 /* Social media styles */

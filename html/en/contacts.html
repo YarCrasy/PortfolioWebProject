@@ -87,7 +87,7 @@
 
           <div id="submit-success-msg">
             <p>
-              Submit success, Check the sent message in the panel below. <br>
+              Submit success, Check or modify the sent message in the panel below. <br>
               ↓
             </p>
           </div>
@@ -99,8 +99,32 @@
       <section class="my-panel">
         <h1>Sent Message</h1>
         <div class="sent-msgs-container" id="sent-msgs-container">
-          <div class="sent-email">
-
+          <div class="sent-msg">
+            <div class="sent-msg-data">
+              <div class="by">
+                  <p>By: ${dataArray[i].email}</p>
+              </div>
+              <div class="sent-type">
+                  <p>Type: ${dataArray[i].msgType}</p>
+              </div>
+              <div class="msg">
+                  <p>Message:<br>${dataArray[i].msg}</p>
+              </div>
+              <form class="edit-form">
+                  <input type="text" class="input-field" id="edit-email-${i}" placeholder="Enter email" name="email" value="${dataArray[i].email}">
+                  <input type="text" class="input-field" id="edit-msgType-${i}" placeholder="Enter message type" name="msgType" value="${dataArray[i].msgType}">
+                  <textarea class="input-field" id="edit-msg-${i}" name="message" placeholder="What do you want to tell me?">${dataArray[i].msg}</textarea>
+                  <button type="submit" id="edit-submit-btn-${i}">Edit</button>
+              </form>
+          </div>
+          <div class="sent-msg-ctrl">
+              <button onclick="deleteLocalStorageAt(0)">
+                  <img src="../../imgs/icon-imgs/trash-icon.svg" alt="delete" class="del-btn">
+              </button>
+              <button id="edit-btn-${i}">
+                  <img src="../../imgs/icon-imgs/edit-icon.svg" alt="edit" class="edit-btn">
+              </button>
+          </div>
           </div>
         </div>
       </section>
@@ -159,7 +183,6 @@
     <script src="../../js/add-html-components.js"></script>
     <script src="../../js/parallax-scroll.js"></script>
     <script src="../../js/contact-scripts/contact-form.js"></script>
-    <script src="../../js/contact-scripts/show-msg.js"></script>
   </div>
 
 </body>

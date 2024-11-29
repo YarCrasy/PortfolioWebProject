@@ -20,10 +20,10 @@ function validateEmail(event) {
 
         if (!EMAIL || !EMAIL_REGEX.test(EMAIL)) {
             if (!EMAIL) {
-                showError("email", "empty email");
+                showError("email");
             }
             else if (!EMAIL_REGEX.test(EMAIL)) {
-                showError("email", "email format error");
+                showError("email");
             }
         }
         else {
@@ -32,7 +32,7 @@ function validateEmail(event) {
 
         //check msg type
         if (!MSG_TYPE) {
-            showError("msg-type", "message type not selected");
+            showError("msg-type");
         }
         else {
             rstFormColor("msg-type");
@@ -40,7 +40,7 @@ function validateEmail(event) {
 
         //check message
         if (!MSG_2_SEND) {
-            showError("message-box", "empty message");
+            showError("message-box");
         }
         else {
             rstFormColor("message-box");
@@ -59,15 +59,22 @@ function validateEmail(event) {
         aux = document.getElementById("submit-btn");
         aux.style.backgroundImage = "linear-gradient(to bottom right, rgb(236, 245, 236), rgb(226, 196, 196), rgb(199, 136, 136))";
         aux.style.borderColor = "rgba(128, 20, 20, 0.5)";
+
+        const DISPLAYER = document.getElementById("submit-success-msg");
+        DISPLAYER.style.visibility = "hidden";
     }
     else {
+        console.log("hi");
+        const FORM = document.getElementById("msg-form");
+        FORM.reset();
         showSuccessMsg();
         saveFormData(EMAIL, MSG_TYPE, MSG_2_SEND);
     }
 
 }
 
-function showError(elementId, msg) {
+
+function showError(elementId) {
     const DISPLAYER = document.getElementById(elementId);
 
     if (elementId == "checkbox") {
@@ -76,7 +83,6 @@ function showError(elementId, msg) {
     } else {
         DISPLAYER.style.backgroundImage = "linear-gradient(to bottom right, rgb(236, 245, 236), rgb(226, 196, 196), rgb(199, 136, 136))";
         DISPLAYER.style.borderColor = "rgba(128, 20, 20, 0.5)";
-        DISPLAYER.placeholder = msg;
     }
 }
 
@@ -113,37 +119,72 @@ function rstFormColor(elementId) {
 }
 
 function saveFormData(email, msgType, msg) {
-    localStorage.setItem("email", email);
-    localStorage.setItem("msgType", msgType);
-    localStorage.setItem("msg", msg);
 
-    const FORM = document.getElementById("msg-form");
-    FORM.reset();
+    let dataArray = [];
+    if (localStorage.getItem("dataArray")) {
+        dataArray = JSON.parse(localStorage.getItem("dataArray"));
+    }
+
+    let newData = [{
+        email: email,
+        msgType: msgType,
+        msg: msg
+    }];
+
+    dataArray.push(newData[0]);
+    localStorage.setItem("dataArray", JSON.stringify(dataArray));
     showFormData();
 }
 
 //show form data at set message panel
 function showFormData() {
-    const EMAIL = localStorage.getItem("email");
-    const MSG_TYPE = localStorage.getItem("msgType");
-    const MSG = localStorage.getItem("msg");
+    let dataArray = JSON.parse(localStorage.getItem("dataArray"));
 
-    if(EMAIL || MSG_TYPE || MSG){
+    if (dataArray) {
         const MSGS_CONTAINER = document.getElementById("sent-msgs-container");
-        let aux = document.createElement("div");
-        aux.classList.add("sent-msg");
-        MSGS_CONTAINER.appendChild(aux);
-        aux.innerHTML = `<div class="by">
-                <p>By: ${EMAIL}</p>
+        MSGS_CONTAINER.innerHTML = "";
+        for (let i = 0; i < dataArray.length; i++) {
+            let aux = document.createElement("div");
+            aux.classList.add("sent-msg");
+            aux.id = `sent-msg-${i}`;
+            MSGS_CONTAINER.appendChild(aux);
+            aux.innerHTML = `<div class="sent-msg-data">
+                <div class="by">
+                    <p>By: ${dataArray[i].email}</p>
+                </div>
+                <div class="sent-type">
+                    <p>Type: ${dataArray[i].msgType}</p>
+                </div>
+                <div class="msg" id="msg-${i}">
+                    <p>Message:<br>${dataArray[i].msg}</p>
+                </div>
             </div>
-            <div class="sent-type">
-                <p>Type: ${MSG_TYPE}</p>
-            </div>
-            <div class="msg">
-                <p>Message:<br>${MSG}</p>
+            <div class="sent-msg-ctrl">
+                <button onclick="deleteLocalStorageAt(${i})">
+                    <img src="../../imgs/icon-imgs/trash-icon.svg" alt="delete" class="del-btn">
+                </button>
+                <button onclick="editLocalStorageAt(${i})">
+                    <img src="../../imgs/icon-imgs/edit-icon.svg" alt="edit" class="edit-btn">
+                </button>
             </div>`;
+        }
     }
+}
 
+function deleteLocalStorageAt(index) {
+    let dataArray = JSON.parse(localStorage.getItem("dataArray"));
+    dataArray.splice(index, 1);
+    localStorage.setItem("dataArray", JSON.stringify(dataArray));
+
+    showFormData();
+}
+
+function editLocalStorageAt(index) {
+    let dataArray = JSON.parse(localStorage.getItem("dataArray"));
+
+    dataArray[index].msg = prompt("Enter new message", dataArray[index].msg);
+    localStorage.setItem("dataArray", JSON.stringify(dataArray));
+    showFormData();
 }
 
 initValidation();
