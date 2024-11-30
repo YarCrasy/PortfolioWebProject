@@ -110,12 +110,12 @@
               <div class="msg">
                   <p>Message:<br>${dataArray[i].msg}</p>
               </div>
-              <form class="edit-form">
-                  <input type="text" class="input-field" id="edit-email-${i}" placeholder="Enter email" name="email" value="${dataArray[i].email}">
-                  <input type="text" class="input-field" id="edit-msgType-${i}" placeholder="Enter message type" name="msgType" value="${dataArray[i].msgType}">
-                  <textarea class="input-field" id="edit-msg-${i}" name="message" placeholder="What do you want to tell me?">${dataArray[i].msg}</textarea>
-                  <button type="submit" id="edit-submit-btn-${i}">Edit</button>
-              </form>
+              <div class = "msg-edit">
+                <textarea name="edit-msgType-${i}" id="edit-msgType-${i}"placeholder="${dataArray[i].msgType}" class="msg"></textarea>
+                <button type="submit" id="edit-submit-btn-${i}">Edit</button>
+                <button>X</button>
+              </div>
+              
           </div>
           <div class="sent-msg-ctrl">
               <button onclick="deleteLocalStorageAt(0)">
