@@ -107,12 +107,12 @@
               <div class="sent-type">
                   <p>Type: ${dataArray[i].msgType}</p>
               </div>
-              <div class="msg">
+              <div class="msg" id="">
                   <p>Message:<br>${dataArray[i].msg}</p>
               </div>
               <div class = "msg-edit">
-                <textarea name="edit-msgType-${i}" id="edit-msgType-${i}"placeholder="${dataArray[i].msgType}" class="msg"></textarea>
-                <button type="submit" id="edit-submit-btn-${i}">Edit</button>
+                <textarea name="edit-msg-${i}" id="edit-msg-${i}"placeholder="${dataArray[i].msg}" class="msg"></textarea>
+                <button onclick="updateMsg(0)">Confirm</button>
                 <button>X</button>
               </div>
               
@@ -121,7 +121,7 @@
               <button onclick="deleteLocalStorageAt(0)">
                   <img src="../../imgs/icon-imgs/trash-icon.svg" alt="delete" class="del-btn">
               </button>
-              <button id="edit-btn-${i}">
+              <button onclick="editLocalStorageAt(0)">
                   <img src="../../imgs/icon-imgs/edit-icon.svg" alt="edit" class="edit-btn">
               </button>
           </div>

@@ -158,6 +158,10 @@ function showFormData() {
                 <div class="msg" id="msg-${i}">
                     <p>Message:<br>${dataArray[i].msg}</p>
                 </div>
+                <div class="msg" id="msg-edit-${i}">
+                    <textarea name="edit-msg-${i}" id="edit-textarea-${i}" placeholder="${dataArray[i].msg}" class="msg"></textarea>
+                    <button onclick="updateMsg(edit-msg-${i})">Edit</button>
+                </div>
             </div>
             <div class="sent-msg-ctrl">
                 <button onclick="deleteLocalStorageAt(${i})">
@@ -182,9 +186,29 @@ function deleteLocalStorageAt(index) {
 function editLocalStorageAt(index) {
     let dataArray = JSON.parse(localStorage.getItem("dataArray"));
 
+    setActive(`msg-${index}`, false);
+    setActive(`msg-edit-${index}`, true);
     dataArray[index].msg = prompt("Enter new message", dataArray[index].msg);
     localStorage.setItem("dataArray", JSON.stringify(dataArray));
     showFormData();
+}
+
+function setActive(elementeId, active) {
+    const ELEMENT = document.getElementById(elementeId);
+    if (active) {
+        ELEMENT.style.display = "none";
+    }
+    else {
+        ELEMENT.style.display = "flex";
+    }
+}
+
+function updateMsg(index) {
+    const MSG = document.getElementById(`edit-textarea-${index}`);	
+    let dataArray = JSON.parse(localStorage.getItem("dataArray"));
+    dataArray[index].msg = MSG.value;
+    localStorage.setItem("dataArray", JSON.stringify(dataArray));
+    
 }
 
 initValidation();
