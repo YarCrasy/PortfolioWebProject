@@ -102,29 +102,30 @@
           <div class="sent-msg">
             <div class="sent-msg-data">
               <div class="by">
-                  <p>By: ${dataArray[i].email}</p>
+                <p>By: ${dataArray[i].email}</p>
               </div>
               <div class="sent-type">
-                  <p>Type: ${dataArray[i].msgType}</p>
+                <p>Type: ${dataArray[i].msgType}</p>
               </div>
               <div class="msg" id="">
-                  <p>Message:<br>${dataArray[i].msg}</p>
+                <p>Message:<br>${dataArray[i].msg}</p>
               </div>
-              <div class = "msg-edit">
-                <textarea name="edit-msg-${i}" id="edit-msg-${i}"placeholder="${dataArray[i].msg}" class="msg"></textarea>
+              <div class="msg-edit">
+                <textarea name="edit-msg-${i}" id="edit-msg-${i}" placeholder="${dataArray[i].msg}"
+                  class="msg"></textarea>
                 <button onclick="updateMsg(0)">Confirm</button>
                 <button>X</button>
               </div>
-              
-          </div>
-          <div class="sent-msg-ctrl">
+
+            </div>
+            <div class="sent-msg-ctrl">
               <button onclick="deleteLocalStorageAt(0)">
-                  <img src="../../imgs/icon-imgs/trash-icon.svg" alt="delete" class="del-btn">
+                <img src="../../imgs/icon-imgs/trash-icon.svg" alt="delete" class="del-btn">
               </button>
               <button onclick="editLocalStorageAt(0)">
-                  <img src="../../imgs/icon-imgs/edit-icon.svg" alt="edit" class="edit-btn">
+                <img src="../../imgs/icon-imgs/edit-icon.svg" alt="edit" class="edit-btn">
               </button>
-          </div>
+            </div>
           </div>
         </div>
       </section>
@@ -181,7 +182,7 @@
   <!--Scripts Area-->
   <div id="scripts">
     <script src="../../js/add-html-components.js"></script>
-    <script src="../../js/parallax-scroll.js"></script>
+    <script src="../../js/scroll-animation.js"></script>
     <script src="../../js/contact-scripts/contact-form.js"></script>
   </div>
 

@@ -16,18 +16,20 @@ window.onload = () => {
 function handleScroll(event) {
     const PANELS = document.querySelectorAll(".my-panel");
 
-    //cancel default scroll
-    event.preventDefault();
     //add or subtract the actual index position
     scrollPosition += event.deltaY / 100;
-    //limit scroll
+
     if (scrollPosition < 0) scrollPosition = 0;
-    else if (scrollPosition >= PANELS.length) scrollPosition = PANELS.length - 1;
+    else if (scrollPosition >= PANELS.length) scrollPosition = PANELS.length;
+    else {
+        //cancel default scroll
+        event.preventDefault();
 
-    //set view to the actual panel
-    window.scrollTo({ top: PANELS[scrollPosition].offsetTop, });
+        //set view to the actual panel
+        window.scrollTo({ top: PANELS[scrollPosition].offsetTop, });
+        updatePanelsState();
+    }
 
-    updatePanelsState();
 }
 
 function handleTouchStart(event) {
