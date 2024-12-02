@@ -19,42 +19,23 @@ function validateEmail(event) {
     if (!EMAIL || !EMAIL_REGEX.test(EMAIL) || !MSG_TYPE || !MSG_2_SEND || !CHECKBOX) {
 
         if (!EMAIL || !EMAIL_REGEX.test(EMAIL)) {
-            if (!EMAIL) {
-                showError("email");
-            }
-            else if (!EMAIL_REGEX.test(EMAIL)) {
-                showError("email");
-            }
+            if (!EMAIL) showError("email");
+            else if (!EMAIL_REGEX.test(EMAIL)) showError("email");
         }
-        else {
-            rstFormColor("email");
-        }
+        else rstFormColor("email");
 
         //check msg type
-        if (!MSG_TYPE) {
-            showError("msg-type");
-        }
-        else {
-            rstFormColor("msg-type");
-        }
+        if (!MSG_TYPE) showError("msg-type");
+        else rstFormColor("msg-type");
 
         //check message
-        if (!MSG_2_SEND) {
-            showError("message-box");
-        }
-        else {
-            rstFormColor("message-box");
-        }
+        if (!MSG_2_SEND) showError("message-box");
+        else rstFormColor("message-box");
 
-        let aux;
+        let aux = document.getElementById("terms-p");
         //check checkbox
-        if (!CHECKBOX) {
-            showError("checkbox", "please agree to the terms");
-        }
-        else {
-            aux = document.getElementById("terms-p");
-            aux.style.color = "rgb(189, 209, 193)";
-        }
+        if (!CHECKBOX) showError("checkbox");
+        else aux.style.color = "rgb(189, 209, 193)";
 
         aux = document.getElementById("submit-btn");
         aux.style.backgroundImage = "linear-gradient(to bottom right, rgb(236, 245, 236), rgb(226, 196, 196), rgb(199, 136, 136))";
@@ -64,7 +45,6 @@ function validateEmail(event) {
         DISPLAYER.style.visibility = "hidden";
     }
     else {
-        console.log("hi");
         const FORM = document.getElementById("msg-form");
         FORM.reset();
         showSuccessMsg();
@@ -160,14 +140,14 @@ function showFormData() {
                 </div>
                 <div class="msg" id="msg-edit-${i}">
                     <textarea name="edit-msg-${i}" id="edit-textarea-${i}" placeholder="${dataArray[i].msg}" class="msg"></textarea>
-                    <button onclick="updateMsg(edit-msg-${i})">Edit</button>
+                    <button onclick="editLocalStorageAt(${i})">Edit</button>
                 </div>
             </div>
             <div class="sent-msg-ctrl">
                 <button onclick="deleteLocalStorageAt(${i})">
                     <img src="../../imgs/icon-imgs/trash-icon.svg" alt="delete" class="del-btn">
                 </button>
-                <button onclick="editLocalStorageAt(${i})">
+                <button onclick="updateMsgAt(${i})">
                     <img src="../../imgs/icon-imgs/edit-icon.svg" alt="edit" class="edit-btn">
                 </button>
             </div>`;
@@ -183,11 +163,16 @@ function deleteLocalStorageAt(index) {
     showFormData();
 }
 
-function editLocalStorageAt(index) {
-    let dataArray = JSON.parse(localStorage.getItem("dataArray"));
-
+function updateMsgAt(index) {
     setActive(`msg-${index}`, false);
     setActive(`msg-edit-${index}`, true);
+    
+}
+
+function editLocalStorageAt(index) {
+
+    let dataArray = JSON.parse(localStorage.getItem("dataArray"));
+
     dataArray[index].msg = prompt("Enter new message", dataArray[index].msg);
     localStorage.setItem("dataArray", JSON.stringify(dataArray));
     showFormData();
@@ -195,12 +180,8 @@ function editLocalStorageAt(index) {
 
 function setActive(elementeId, active) {
     const ELEMENT = document.getElementById(elementeId);
-    if (active) {
-        ELEMENT.style.display = "none";
-    }
-    else {
-        ELEMENT.style.display = "flex";
-    }
+    if (active) ELEMENT.style.display = "none";
+    else ELEMENT.style.display = "flex";
 }
 
 function updateMsg(index) {

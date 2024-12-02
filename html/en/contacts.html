@@ -99,34 +99,7 @@
       <section class="my-panel">
         <h1>Sent Message</h1>
         <div class="sent-msgs-container" id="sent-msgs-container">
-          <div class="sent-msg">
-            <div class="sent-msg-data">
-              <div class="by">
-                <p>By: ${dataArray[i].email}</p>
-              </div>
-              <div class="sent-type">
-                <p>Type: ${dataArray[i].msgType}</p>
-              </div>
-              <div class="msg" id="">
-                <p>Message:<br>${dataArray[i].msg}</p>
-              </div>
-              <div class="msg-edit">
-                <textarea name="edit-msg-${i}" id="edit-msg-${i}" placeholder="${dataArray[i].msg}"
-                  class="msg"></textarea>
-                <button onclick="updateMsg(0)">Confirm</button>
-                <button>X</button>
-              </div>
-
-            </div>
-            <div class="sent-msg-ctrl">
-              <button onclick="deleteLocalStorageAt(0)">
-                <img src="../../imgs/icon-imgs/trash-icon.svg" alt="delete" class="del-btn">
-              </button>
-              <button onclick="editLocalStorageAt(0)">
-                <img src="../../imgs/icon-imgs/edit-icon.svg" alt="edit" class="edit-btn">
-              </button>
-            </div>
-          </div>
+          
         </div>
       </section>
 
