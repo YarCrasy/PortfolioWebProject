@@ -1,16 +1,12 @@
-
-//it is not a really a parallax, 
-//but more or less have the same scroll requirement
-//and it fits better with my web instead of doing something weird
-
 let scrollPosition = 0; //actual focused panel
 let startY = 0; // starting Y position for touch
-
 
 window.onload = () => {
     //wait for the page to be totally loaded and update panels
     updatePanelsState();
     scrollTo(0, 0);
+    scrollPosition = 0;
+    startY = 0;
 };
 
 function handleScroll(event) {

@@ -1,0 +1,25 @@
+#parallax-0 {
+    z-index: 0;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 100px;
+}
+
+#parallax-1 {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    overflow:  scroll;
+    flex-wrap: nowrap;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgb(255, 0, 183);
+}
+
+#parallax-1 img{
+    width: 450px;
+    height: 360px;
+    transform: translateY(-10vw);
+}
