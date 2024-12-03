@@ -1,0 +1,101 @@
+.form-item {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+label {
+    margin-top: 10px;
+
+    font-size: 20px;
+}
+
+.input-field {
+    padding: 10px;
+
+    height: 50px;
+    background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
+    border: 5px solid rgba(20, 128, 20, 0.5);
+    border-radius: 10px;
+}
+
+.msg-type {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    width: fit-content;
+    background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
+    border: 5px solid rgba(20, 128, 20, 0.5);
+    border-radius: 10px;
+}
+
+.msg-type label {
+    margin-top: 0;
+
+    font-size: 14px;
+    color: black;
+}
+
+#message-box {
+    height: 190px;
+}
+
+.row-align {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+
+    width: 100%;
+}
+
+.temrs-conditions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 20px;
+
+    height: fit-content;
+}
+
+.temrs-conditions p {
+    margin-top: 7px;
+
+    font-size: 12px;
+}
+
+.submit-btn {
+    display: flex;
+}
+
+.submit-btn button {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    background-image: linear-gradient(to bottom right, rgb(236, 245, 236), rgb(196, 226, 196), rgb(136, 199, 136));
+    border: 5px solid rgb(20, 128, 20);
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+#submit-success-msg {
+    visibility: hidden;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+
+    width: 100%;
+    border-radius: 15px;
+    border: 5px solid rgb(20, 128, 20);
+    background-color: rgb(13, 158, 13);
+}
+
+.submit-success-msg p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 5s ease;
+}

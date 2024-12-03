@@ -138,17 +138,22 @@ function showFormData() {
                 <div class="msg" id="msg-${i}">
                     <p>Message:<br>${dataArray[i].msg}</p>
                 </div>
-                <div class="msg" id="msg-edit-${i}">
+                <div class="msg-editor" id="msg-edit-${i}">
                     <textarea name="edit-msg-${i}" id="edit-textarea-${i}" placeholder="${dataArray[i].msg}" class="msg"></textarea>
-                    <button onclick="editLocalStorageAt(${i})">Edit</button>
+                    <button onclick="editLocalStorageAt(${i})">
+                        <img src="../../imgs/icon-imgs/save-icon.svg" alt="save">
+                    </button>
+                    <button onclick="updateMsgAt(${i}, false)">
+                        <img src="../../imgs/icon-imgs/save-icon.svg" alt="save">
+                    </button>
                 </div>
             </div>
             <div class="sent-msg-ctrl">
                 <button onclick="deleteLocalStorageAt(${i})">
-                    <img src="../../imgs/icon-imgs/trash-icon.svg" alt="delete" class="del-btn">
+                    <img src="../../imgs/icon-imgs/trash-icon.svg" alt="delete">
                 </button>
-                <button onclick="updateMsgAt(${i})">
-                    <img src="../../imgs/icon-imgs/edit-icon.svg" alt="edit" class="edit-btn">
+                <button onclick="updateMsgAt(${i}, true)">
+                    <img src="../../imgs/icon-imgs/edit-icon.svg" alt="edit">
                 </button>
             </div>`;
         }
@@ -163,33 +168,41 @@ function deleteLocalStorageAt(index) {
     showFormData();
 }
 
-function updateMsgAt(index) {
-    setActive(`msg-${index}`, false);
-    setActive(`msg-edit-${index}`, true);
-    
+function updateMsgAt(index, set) {
+    if (set) {
+        setActive(`msg-${index}`, !set);
+        setActive(`msg-edit-${index}`, set);
+    }
+    else {
+        setActive(`msg-${index}`, set);
+        setActive(`msg-edit-${index}`, !set);
+    }
+
 }
 
 function editLocalStorageAt(index) {
-
     let dataArray = JSON.parse(localStorage.getItem("dataArray"));
 
-    dataArray[index].msg = prompt("Enter new message", dataArray[index].msg);
+    dataArray[index].msg = document.getElementById(`edit-textarea-${index}`).value;
     localStorage.setItem("dataArray", JSON.stringify(dataArray));
+
     showFormData();
+    setActive(`msg-${index}`, true);
+    setActive(`msg-edit-${index}`, false);
 }
 
 function setActive(elementeId, active) {
     const ELEMENT = document.getElementById(elementeId);
-    if (active) ELEMENT.style.display = "none";
+    if (!active) ELEMENT.style.display = "none";
     else ELEMENT.style.display = "flex";
 }
 
 function updateMsg(index) {
-    const MSG = document.getElementById(`edit-textarea-${index}`);	
+    const MSG = document.getElementById(`edit-textarea-${index}`);
     let dataArray = JSON.parse(localStorage.getItem("dataArray"));
     dataArray[index].msg = MSG.value;
     localStorage.setItem("dataArray", JSON.stringify(dataArray));
-    
+
 }
 
 initValidation();
