@@ -206,12 +206,20 @@ function updateMsgAt(index, set) {
 function editLocalStorageAt(index) {
     let dataArray = JSON.parse(localStorage.getItem("dataArray"));
 
-    dataArray[index].msg = document.getElementById(`edit-textarea-${index}`).value;
-    localStorage.setItem("dataArray", JSON.stringify(dataArray));
+    let aux = document.getElementById(`edit-textarea-${index}`);
 
-    showFormData();
-    setActive(`msg-${index}`, true);
-    setActive(`msg-edit-${index}`, false);
+    if (!aux.value) {
+        aux.style.borderColor = "red";
+    }
+    else {
+        aux.style.borderColor = "rgb(139, 139, 139)";
+        dataArray[index].msg = aux.value;
+        localStorage.setItem("dataArray", JSON.stringify(dataArray));
+
+        showFormData();
+        setActive(`msg-${index}`, true);
+        setActive(`msg-edit-${index}`, false);
+    }
 }
 
 function setActive(elementeId, active) {
