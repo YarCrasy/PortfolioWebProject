@@ -1,0 +1,24 @@
+.parallax-bg{
+    height: 100%;
+}
+
+.parallax-layer{
+    position: absolute;
+}
+
+#parallax-0 img{
+    z-index: 0;
+    position: absolute;
+    right: 10px;
+}
+
+#parallax-1{
+    border: 5px solid rgb(75, 43, 66);
+    height: 500%;
+}
+
+#parallax-1 img{
+    width: 19.83%;
+    z-index: 1;
+    overflow: auto;
+}

@@ -1,0 +1,33 @@
+body {
+    background-image: url("../../imgs/parallax-imgs/night-sky-b-g-main.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+h1 {
+    font-size: 3vw;
+    color: rgb(175, 213, 231);
+    text-align: end;
+}
+
+p {
+    color: white;
+}
+
+.content{
+    z-index: 10;
+    
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 1vh 2vw 1vw;
+    position: relative;
+
+    background-image: linear-gradient(to bottom right, rgb(106, 80, 155) 5%, rgb(88, 43, 76) 95%);
+    border: 5px solid rgb(75, 43, 66);
+    border-radius: 15px;
+}
