@@ -1,24 +1,41 @@
-.parallax-bg{
+body {
+    background-image: url("../../imgs/parallax-imgs/night-sky-b-g-main.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+.parallax-bg {
     height: 100%;
+    overflow: hidden;
+    border: 5px solid rgb(255, 0, 183);
 }
 
-.parallax-layer{
+.parallax-layer {
     position: absolute;
+    height: 300%;
+    width: 100%;
+    overflow: hidden;
 }
 
-#parallax-0 img{
-    z-index: 0;
-    position: absolute;
-    right: 10px;
-}
-
-#parallax-1{
-    border: 5px solid rgb(75, 43, 66);
-    height: 500%;
-}
-
-#parallax-1 img{
-    width: 19.83%;
+.parallax-layer img {
     z-index: 1;
-    overflow: auto;
+    width: 100%;
+    transition: transform 0.5s ease-out;
+}
+
+#parallax-0 img {
+    z-index: 0;
+    position: relative;
+    width: 200px;
+    right: -70%;
+    top: 5%;
+}
+
+#parallax-3 img {
+    z-index: 3;
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    width: 100%;
 }

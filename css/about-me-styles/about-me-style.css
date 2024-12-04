@@ -1,33 +1,55 @@
-body {
-    background-image: url("../../imgs/parallax-imgs/night-sky-b-g-main.png");
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 100%;
+.contents{
+    height: 300vh;
 }
 
-h1 {
-    font-size: 3vw;
+.content {
+    z-index: 10;
+    margin-top: 50px;
+    margin-bottom: 40vh;
+    padding: 50px;
+}
+
+.content h1 {
+    font-size: calc(3em - 0.5vw);
     color: rgb(175, 213, 231);
     text-align: end;
+    text-decoration: underline;
+    margin-right: 3vw;
 }
 
-p {
-    color: white;
+.content b {
+    color: rgb(175, 213, 231);
 }
 
-.content{
-    z-index: 10;
-    
-}
-
-.description {
+.content-panels {
     display: flex;
     flex-direction: column;
-    margin: 50px;
-    padding: 1vh 2vw 1vw;
+    margin-top: 100vh;
+    padding-top: 1vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
     position: relative;
-
     background-image: linear-gradient(to bottom right, rgb(106, 80, 155) 5%, rgb(88, 43, 76) 95%);
     border: 5px solid rgb(75, 43, 66);
     border-radius: 15px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.content-panels.visible {
+    opacity: 0.8;
+    transform: scale(1);
+}
+
+#education{
+    margin-top: 75vh;
+}
+
+.content-panels p {
+    color: rgb(128, 211, 190);
+    font-size: calc(1.5em - 0.25vw);
+    text-align: left;
+    display: block;
+
 }
