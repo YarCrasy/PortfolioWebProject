@@ -16,6 +16,10 @@
 Header and footer need to be in a server to show out, please host the page in a server to view al the content.
 </p>
 
+## Changelog v1.2.3
+ * refactored html to pass the w3c validation
+ * added a fast traduction for spanish and chinese for about me (have to check the traductions)
+
 ## Changelog v1.2.2
  * fixed added delete and edit function in the contact section
  * added simple parallax effect in about me section
