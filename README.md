@@ -16,21 +16,6 @@
 Header and footer need to be in a server to show out, please host the page in a server to view al the content.
 </p>
 
-## Changelog v1.2.3
- * refactored html to pass the w3c validation
- * added a fast traduction for spanish and chinese for about me (have to check the traductions)
-
-## Changelog v1.2.2
- * fixed added delete and edit function in the contact section
- * added simple parallax effect in about me section
- * added a minimmun content in about me
- * changed footer from static position to stick position
- * renamed parallax-scroll.js to panel-animation.js
- * fixed minor bug in panel scroll that affect to footer
- * added redirection to the English page by default
- * splited css in defalut styles and media query styles
- * fixed textarea showing in front of offcanvas
-
 ## Changelog v1.2.1
  * minor changes to readme and added a changelog to it
  * modified game-panels to my-panels to reuse them in other sites
@@ -40,6 +25,7 @@ Header and footer need to be in a server to show out, please host the page in a 
  * used offcanvas for header in mobile (default) view
  * added social media in contact html
  * added contact form in contact html (note that the data entered will not be sent to anyother site)
+ * moved default html files to html>en
  * added htmls for other languages
  * added language selection
 
@@ -48,19 +34,24 @@ Header and footer need to be in a server to show out, please host the page in a 
  * HTML
  * CSS
  * Javascript
- * Unity
 
 ## Composition
-the web is currently made with 6 HTML files (18 files with other languages):<br>
-4 main files in:<br>
- * Index: where is the main web page.
- * Game: where is posible to find all my game projects
- * Contact: where is displayed my social media
- * AboutMe: where you can find information about me
-2 component files:<br>
- * header: an element that is added to all the main files
- * footer: an element that is added to all the main files
+the web is currently made with 6 HTML files (18 files with other languages):
+<p>
+4 main files in:
+</p>
+  * Index: where is the main web page.
+  * Game: where is posible to find all my game projects
+  * Contact: where is displayed my social media
+  * AboutMe: where you can find information about me
+<p>
+2 component files:
+</p>
+  * header: an element that is added to all the main files
+  * footer: an element that is added to all the main files
 
+  5 CSS files:
+  * body
 
 ## Inspired in
 <p>As a requirement of the project, it must be inspirated in one of the design from the web <b>dribbble</b>.</p> 
