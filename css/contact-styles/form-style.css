@@ -7,7 +7,6 @@
 
 label {
     margin-top: 10px;
-
     font-size: 20px;
 }
 
@@ -58,7 +57,8 @@ label {
     height: fit-content;
 }
 
-.temrs-conditions p {
+.temrs-conditions label {
+    
     margin-top: 7px;
 
     font-size: 12px;
