@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="../../css/default-styles/body-styles/panel-style.css">
   <link rel="stylesheet" href="../../css/contact-styles/form-style.css">
   <link rel="stylesheet" href="../../css/contact-styles/data-displayer-style.css">
+  <link rel="stylesheet" href="../../css/contact-styles/chat-style.css">
 </head>
 
 <body>
@@ -44,9 +45,37 @@
 
     <div class="panels-container">
 
+      <!--Chat with me-->
+      <section class="my-panel">
+        <h1>Chat with me</h1>
+        <div class="chat-container">
+          <div id="chat-displayer">
+            <div class="chat-sent-msg">
+              <p>Nick:</p>
+              <p>msg</p>
+            </div>
+          </div>
+          <div id="chat-input">
+            <div id="chat-text-input">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                <label for="email">Nickname</label>
+              </div>
+              <div class="form-floating">
+                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                <label for="email">Message</label>
+              </div>
+            </div>
+            <div id="send-chat-msg">
+              <button>Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!--Contact Form-->
       <section class="my-panel">
-        <h1>Send Message</h1>
+        <h1>Send Message (Mail)</h1>
         <form id="msg-form">
           <!-- contact email -->
           <div class="form-item">
