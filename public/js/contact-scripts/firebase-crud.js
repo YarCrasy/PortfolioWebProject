@@ -1,4 +1,4 @@
-import firebase from "../firebase-setup.js";
+import firebase from "./firebase-setup.js";
 
 function listenToNewMessages() {
   const db = firebase.getDatabase();
@@ -15,7 +15,7 @@ function showMessages(snapshot) {
 
   let messageList = "";
   for (let item in data) {
-    messageList = messageList +`
+    messageList = messageList + `
           <div class="chat-sent-msg">
             <p><b>${data[item].sentBy}:</b>
             ${data[item].message}
