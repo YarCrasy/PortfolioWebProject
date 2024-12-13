@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="../../css/default-styles/body-styles/panel-style.css">
   <link rel="stylesheet" href="../../css/contact-styles/form-style.css">
   <link rel="stylesheet" href="../../css/contact-styles/data-displayer-style.css">
+  <link rel="stylesheet" href="../../css/contact-styles/chat-style.css">
 </head>
 
 <body>
@@ -44,6 +45,30 @@
 
     <div class="panels-container">
 
+      <!--Chat with me-->
+      <section class="my-panel">
+        <h1>聊天</h1>
+        <div class="chat-container">
+          <div id="chat-displayer">
+            
+          </div>
+          <form id="chat-input-form">
+            <div id="chat-text-input">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="sent-by" placeholder="输入昵称" name="sent-by">
+                <label for="sent-by">昵称</label>
+              </div>
+              <div class="form-floating">
+                <input type="text" class="form-control" id="message" placeholder="输入消息" name="message">
+                <label for="message">消息</label>
+              </div>
+            </div>
+            <div id="send-chat-msg">
+              <button type="submit">发送</button>
+            </div>
+          </form>
+        </div>
+      </section>
       <!--Contact Form-->
       <section class="my-panel">
         <h1>发送消息</h1>
@@ -158,9 +183,11 @@
   <!--Scripts Area-->
   <div id="scripts">
     <script src="../../js/add-html-components.js"></script>
-    <script src="../../js/scroll-animation.js"></script>
+    <script src="../../js/panels-animation.js"></script>
     <script src="../../js/contact-scripts/contact-form.js"></script>
+    <script type="module" src="../../js/contact-scripts/firebase-crud.js"></script>
   </div>
+  
 </body>
 
 </html>

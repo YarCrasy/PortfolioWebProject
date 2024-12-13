@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="../../css/default-styles/body-styles/panel-style.css">
   <link rel="stylesheet" href="../../css/contact-styles/form-style.css">
   <link rel="stylesheet" href="../../css/contact-styles/data-displayer-style.css">
+  <link rel="stylesheet" href="../../css/contact-styles/chat-style.css">
 </head>
 
 <body>
@@ -43,6 +44,31 @@
   <main class="contents">
 
     <div class="panels-container">
+
+      <!--Chat with me-->
+      <section class="my-panel">
+        <h1>Chat Conmigo</h1>
+        <div class="chat-container">
+          <div id="chat-displayer">
+            
+          </div>
+          <form id="chat-input-form">
+            <div id="chat-text-input">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="sent-by" placeholder="Ingrese apodo" name="sent-by">
+                <label for="sent-by">Apodo</label>
+              </div>
+              <div class="form-floating">
+                <input type="text" class="form-control" id="message" placeholder="Ingrese mensaje" name="message">
+                <label for="message">Mensaje</label>
+              </div>
+            </div>
+            <div id="send-chat-msg">
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </section>
 
       <!--Contact Form-->
       <section class="my-panel">
@@ -160,6 +186,7 @@
     <script src="../../js/add-html-components.js"></script>
     <script src="../../js/panels-animation.js"></script>
     <script src="../../js/contact-scripts/contact-form.js"></script>
+    <script type="module" src="../../js/contact-scripts/firebase-crud.js"></script>
   </div>
 
 </body>
