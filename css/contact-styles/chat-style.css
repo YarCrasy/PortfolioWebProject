@@ -42,7 +42,7 @@
 
 /* Chat msg input --------------------------------------------------------------------------*/
 
-#chat-input {
+#chat-input-form {
     display: flex;
     flex-direction: row;
     margin: 10px;
