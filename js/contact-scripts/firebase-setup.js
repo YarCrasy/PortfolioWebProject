@@ -6,14 +6,13 @@ import { getDatabase, ref, onValue, push, set } from "https://www.gstatic.com/fi
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCIpWN2HS6fq39owvRn8pDAO7CY-66EXDY",
-  authDomain: "testingfirebase-9d845.firebaseapp.com",
-  databaseURL: "https://testingfirebase-9d845-default-rtdb.firebaseio.com",
-  projectId: "testingfirebase-9d845",
-  storageBucket: "testingfirebase-9d845.firebasestorage.app",
-  messagingSenderId: "87245875848",
-  appId: "1:87245875848:web:745bb45587fb4558034d3d",
-  measurementId: "G-NZQ88H6DQR"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase
