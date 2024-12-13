@@ -19,7 +19,7 @@ Header and footer need to be in a server to show out, please host the page in a 
 ## Changelog v1.2.4
  * fixed panel scroll for Firefox
  * fixed header icon bug for Firefox
- * 
+ * added a chat system connected with Firebase realtime DB
 
 ## Changelog v1.2.3
  * refactored html to pass the w3c validation
