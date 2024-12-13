@@ -16,6 +16,11 @@
 Header and footer need to be in a server to show out, please host the page in a server to view al the content.
 </p>
 
+## Changelog v1.2.4
+ * fixed panel scroll for Firefox
+ * fixed header icon bug for Firefox
+ * 
+
 ## Changelog v1.2.3
  * refactored html to pass the w3c validation
  * added a fast traduction for spanish and chinese for about me (have to check the traductions)

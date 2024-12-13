@@ -1,3 +1,4 @@
+const PANELS = document.querySelectorAll(".my-panel");
 let scrollPosition = 0; //actual focused panel
 let startY = 0; // starting Y position for touch
 
@@ -10,43 +11,43 @@ window.onload = () => {
 };
 
 function handleScroll(event) {
-    const PANELS = document.querySelectorAll(".my-panel");
+    event.preventDefault();
+    const deltaY = event.deltaY;
 
-    //add or subtract the actual index position
-    scrollPosition += event.deltaY / 100;
-
-    if (scrollPosition < 0) scrollPosition = 0;
-    else if (scrollPosition >= PANELS.length) scrollPosition = PANELS.length;
-    else {
-        //cancel default scroll
-        event.preventDefault();
-
-        //set view to the actual panel
-        window.scrollTo({ top: PANELS[scrollPosition].offsetTop, });
-        updatePanelsState();
-    }
-
-}
-
-function handleTouchStart(event) {
-    startY = event.touches[0].clientY;
-}
-
-function handleTouchEnd(event) {
-    const PANELS = document.querySelectorAll(".my-panel");
-    //calculate the difference in touch position
-    const deltaY = startY - event.changedTouches[0].clientY;
-
-    //check if the movement is greater than the threshold
     if (deltaY > 0) scrollPosition += 1;
     else scrollPosition -= 1;
 
-    //limit scroll
+    // limit scrollPosition within valid range
+    if (scrollPosition < 0) scrollPosition = 0;
+    else if (scrollPosition >= PANELS.length) {
+        scrollPosition = PANELS.length - 1;
+        window.scrollTo({ bottom: PANELS[scrollPosition].offsetTop });
+    }
+    if (PANELS[scrollPosition]) {
+        window.scrollTo({ top: PANELS[scrollPosition].offsetTop });
+    }
+
+    updatePanelsState();
+}
+
+function handleTouchStart(event) {
+    startY = event.changedTouches[0].clientY;
+}
+
+function handleTouchEnd(event) {
+    const deltaY = startY - event.changedTouches[0].clientY;
+
+    if (deltaY > 0) scrollPosition += 1;
+    else scrollPosition -= 1;
+
+    // limit scrollPosition within valid range
     if (scrollPosition < 0) scrollPosition = 0;
     else if (scrollPosition >= PANELS.length) scrollPosition = PANELS.length - 1;
 
-    //set view to the actual panel
-    window.scrollTo({ top: PANELS[scrollPosition].offsetTop, });
+    // set view to the actual panel
+    if (PANELS[scrollPosition]) {
+        window.scrollTo({ top: PANELS[scrollPosition].offsetTop });
+    }
 
     updatePanelsState();
 }

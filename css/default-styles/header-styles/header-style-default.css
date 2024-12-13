@@ -17,8 +17,11 @@ header {
 #index-icon {
   display: flex;
   justify-content: start;
+}
 
+#index-icon img {
   border: 1px solid rgb(85, 38, 72);
+  border-radius: 10px;
 }
 
 .web-title {
