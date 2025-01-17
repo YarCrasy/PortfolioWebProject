@@ -1,7 +1,7 @@
 # PortfolioWebProject
 
  <div align="center">
-  <img align="center" class="header-icon" src="public/imgs/icon-imgs/lcj-icon.jpg" alt="icon" />
+  <img align="center" class="header-icon" src="imgs/icon-imgs/lcj-icon.jpg" alt="icon" />
   <p>Author: Yar Crasy (LINGCHENG JIANG)</p>
  </div>
  
