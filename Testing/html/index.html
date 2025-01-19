@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game Portfolio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo-container">
+                <img src="../imgs/icon-imgs/lcj-icon.jpg" alt="Portfolio Logo" class="logo-img">
+                <h1 class="logo">Yar's Portfolio</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#games">Games</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <div class="lang-dropdown">
+                    <button class="dropdown-btn">EN ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="es">Español</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="games" class="games-section">
+            <h2>My Games</h2>
+            <div class="games-grid">
+                <article class="game-card">
+                    <img src="placeholder-game1.jpg" alt="Game 1">
+                    <h3>Game Title 1</h3>
+                    <p>Short description of the game. What it's about and what technologies were used.</p>
+                    <a href="#" class="play-button">Play Now</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="profile-placeholder.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="about-text">
+                    <p>Your introduction and background in game development goes here.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Game Portfolio. All rights reserved.</p>
+    </footer>
+    <script src="../js/scroll.js"></script>
+</body>
+
+</html>
