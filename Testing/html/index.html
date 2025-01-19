@@ -9,36 +9,39 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="logo-container">
-                <img src="../imgs/icon-imgs/lcj-icon.jpg" alt="Portfolio Logo" class="logo-img">
-                <h1 class="logo">Yar's Portfolio</h1>
-            </div>
-            <div class="nav-links">
-                <a href="#games">Games</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <div class="lang-dropdown">
-                    <button class="dropdown-btn">EN ▼</button>
-                    <div class="dropdown-content">
-                        <a href="#" data-lang="en">English</a>
-                        <a href="#" data-lang="es">Español</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
         <section id="games" class="games-section">
             <h2>My Games</h2>
             <div class="games-grid">
                 <article class="game-card">
-                    <img src="placeholder-game1.jpg" alt="Game 1">
-                    <h3>Game Title 1</h3>
-                    <p>Short description of the game. What it's about and what technologies were used.</p>
-                    <a href="#" class="play-button">Play Now</a>
+                    <div class="carousel">
+                        <div class="carousel-container">
+                            <img src="../imgs/game-imgs/game1-1.jpg" alt="Game Screenshot 1" class="carousel-item active">
+                            <img src="../imgs/game-imgs/game1-2.jpg" alt="Game Screenshot 2" class="carousel-item">
+                            <img src="../imgs/game-imgs/game1-3.jpg" alt="Game Screenshot 3" class="carousel-item">
+                        </div>
+                        <button class="carousel-button prev">&#10094;</button>
+                        <button class="carousel-button next">&#10095;</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Game Title 1</h3>
+                        <p class="game-description">Short description of the game. What it's about and what technologies were used.</p>
+                        <div class="game-tags">
+                            <span class="game-tag">Unity</span>
+                            <span class="game-tag">C#</span>
+                            <span class="game-tag">2D</span>
+                        </div>
+                            <button class="btn" onclick="window.location.href='#'">Play Now</button>
+                            <button class="btn" onclick="window.location.href='#'">Source Code</button>
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>
@@ -77,22 +80,12 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#games">Games</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="social-links">
-                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-            <p class="copyright">&copy; 2024 Yar's Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/carousel.js"></script>
     <script src="../js/scroll.js"></script>
 </body>
 
+</html>
 </html>

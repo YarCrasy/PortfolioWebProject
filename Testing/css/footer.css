@@ -39,21 +39,47 @@
 }
 
 .social-links a {
-    color: white;
-    font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
-.social-links a:hover {
-    color: var(--secondary-color);
-    text-shadow: var(--toxic-glow);
+.social-icon {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    filter: brightness(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+    fill: var(--secondary-color);
+    filter: drop-shadow(0 0 5px var(--secondary-color));
     transform: translateY(-2px);
+}
+
+.social-container {
+    text-align: center;
+}
+
+.social-title {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-shadow: var(--toxic-glow);
 }
 
 .copyright {
     color: var(--text-color);
     font-size: 0.9rem;
 }
+
+/* Eliminar estos bloques ya que ahora están en default.css */
+/* .contact-form button {
+    ...
+}
+
+.contact-form button:hover {
+    ...
+} */
 
 @media (max-width: 768px) {
     .footer-content {
@@ -67,5 +93,9 @@
 
     .social-links {
         justify-content: center;
+    }
+
+    .social-container {
+        width: 100%;
     }
 }
