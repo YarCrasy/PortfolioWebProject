@@ -6,12 +6,12 @@
 
 /* Variables globales */
 :root {
-    --primary-color: #4a0e63;
+    --primary-color: #6d1494;
     --secondary-color: #39ff14;
     --text-color: #e0e0e0;
     --background-color: #1a1a1a;
     --green-gradient: linear-gradient(145deg, rgba(57, 255, 20, 0.8), rgba(152, 255, 133, 0.9));
-    --toxic-gradient: linear-gradient(45deg, #4a0e63, #1f6357);
+    --toxic-gradient: linear-gradient(45deg, #5c127c, #1f6354);
     --toxic-glow: 0 0 10px rgba(57, 255, 20, 0.5);
     --card-bg: #2a1f2d;
     --toxic-hover: #50ff3d;
