@@ -47,6 +47,8 @@ body {
 main {
     margin-top: 80px;
     padding: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 /* Estilos de botones globales */
