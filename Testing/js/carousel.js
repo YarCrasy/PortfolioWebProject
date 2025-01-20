@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const carousels = document.querySelectorAll('.carousel');
-    
+
     carousels.forEach(carousel => {
         const items = carousel.querySelectorAll('.carousel-item');
         const dots = carousel.querySelectorAll('.dot');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function showSlide(index) {
             items.forEach(item => item.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
-            
+
             items[index].classList.add('active');
             dots[index].classList.add('active');
         }
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Event listeners
         next.addEventListener('click', nextSlide);
         prev.addEventListener('click', prevSlide);
-        
+
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 currentIndex = index;
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Auto-play (opcional)
-        setInterval(nextSlide, 5000);
+        // Auto-play
+        setInterval(nextSlide, 30000);
     });
 });
