@@ -139,6 +139,7 @@
     color: white;
     border: 1px solid var(--secondary-color);
     padding: 0.5rem;
+    padding-bottom: 1.5rem;
     cursor: pointer;
     border-radius: 50%;
     transition: all 0.3s ease, opacity 0.3s ease;
@@ -148,6 +149,8 @@
     text-decoration: none;
     opacity: 0;
     z-index: 10;
+    height: 30px;
+    width: 30px;
 }
 
 .carousel:hover .carousel-button {

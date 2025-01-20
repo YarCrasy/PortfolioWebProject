@@ -51,6 +51,10 @@ main {
     z-index: 1;
 }
 
+p{
+    margin: 0.5rem;
+}
+
 /* Estilos de botones globales */
 button,
 .btn,
@@ -68,13 +72,13 @@ input[type="submit"] {
     text-decoration: none;
 }
 
-button:hover,
-.btn:hover,
-input[type="submit"]:hover {
+button:hover {
     transform: translateY(-2px);
     background: linear-gradient(145deg, rgba(57, 255, 20, 0.8), rgba(152, 255, 133, 0.9));
     border-color: #98ff85;
     box-shadow: 0 0 15px rgba(152, 255, 133, 0.8);
+    background: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* Estilos de la barra de desplazamiento */

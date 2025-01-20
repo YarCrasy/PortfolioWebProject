@@ -1,4 +1,3 @@
-
 .contact-section {
     max-width: 1200px;
     margin: 0 auto 4rem;
@@ -17,9 +16,4 @@
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
-}
-
-.contact-form button:hover {
-    background: var(--secondary-color);
-    color: var(--primary-color);
 }
