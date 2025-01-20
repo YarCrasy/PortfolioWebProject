@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
-            // Inicializar menú después de cargar el header
             initializeMenu();
         });
 
