@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game Portfolio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/effects/reveal.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section id="games" class="games-section reveal">
+            <h2>My Games</h2>
+            <div class="games-grid">
+                <article class="game-card">
+                    <div class="carousel">
+                        <div class="carousel-container">
+                            <img src="../imgs/game-imgs/space-maze/portrait-sm.png" alt="Game Screenshot 1"
+                                class="carousel-item active">
+                            <img src="../imgs/game-imgs/space-maze/sm-screenshot1.png" alt="Game Screenshot 2"
+                                class="carousel-item">
+                            <img src="../imgs/game-imgs/space-maze/sm-screenshot2.png" alt="Game Screenshot 3"
+                                class="carousel-item">
+                        </div>
+                        <button class="carousel-button prev">&#10094;</button>
+                        <button class="carousel-button next">&#10095;</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Game Title 1</h3>
+                        <p class="game-description">
+                            Short description of the game. What it's about and what technologies were used.
+                        </p>
+                        <div class="game-tags">
+                            <span class="game-tag">Unity</span>
+                            <span class="game-tag">C#</span>
+                            <span class="game-tag">2D</span>
+                        </div>
+                        <button class="btn" onclick="window.location.href='#'">Play Now</button>
+                        <button class="btn" onclick="window.location.href='#'">Source Code</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about-section reveal from-left">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-image-container">
+                    <img src="../imgs/icon-imgs/lcj-icon.jpg" class="profile-pic">
+                </div>
+                <div class="about-text">
+                    <h3>Game Developer & Designer</h3>
+                    <p>
+                        Well, it all started when I was in high school, since there, my favorite hobby is playing
+                        video-games.
+                        for those times, I was thinking, "why not make my own games?" <br>
+                        But I have a problem, I'm not a great artist.
+                        Hopefully, in this sector, it is not only about art, but also about programming.
+                        Casually there is a optional computer science class in mmy school, so I decided to take it.
+                        And I found that pretty interesting, and I started to loving it.
+                    </p>
+                    <p>
+                        After the high school, I wanted to chose the game development as my career in the college to
+                        learn more aboutit.
+                        But the college requires a higher score in the entrance exam than I have, so I failed to enter
+                        in that carrer.<br>
+                        I didn't give up, I chose the computer science as my major,
+                        sadly, when I was in the college, started the pandemic, and the telematic classes are not as
+                        good as the
+                        presential classes.
+                        So I decided to look for a better way to learn game development, then I found a online school.
+                    </p>
+                    <p>
+                        here, I learned a lot of things about game development, and I'm still learning.
+                    </p>
+                    <div class="skills-container">
+                        <h4>Skills</h4>
+                        <div class="skills-grid">
+                            <span class="skill-tag">Unity</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">Game Design</span>
+                            <span class="skill-tag">Web Design</span>
+                            <span class="skill-tag">Level Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section reveal">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/reveal.js"></script>
+</body>
+
+</html>
