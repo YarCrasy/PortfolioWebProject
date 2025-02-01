@@ -1,0 +1,130 @@
+@import 'header.css';
+@import 'sections/games.css';
+@import 'sections/about.css';
+@import 'sections/contact.css';
+@import 'footer.css';
+
+/* Variables globales */
+:root {
+    --primary-color: #6d1494;
+    --secondary-color: #39ff14;
+    --text-color: #e0e0e0;
+    --background-color: #1a1a1a;
+    --green-gradient: linear-gradient(145deg, rgba(57, 255, 20, 0.8), rgba(152, 255, 133, 0.9));
+    --toxic-gradient: linear-gradient(45deg, #5c127c, #1f6354);
+    --toxic-glow: 0 0 10px rgba(57, 255, 20, 0.5);
+    --card-bg: #2a1f2d;
+    --toxic-hover: #50ff3d;
+    --scrollbar-bg: #1a1a1a;
+    --scrollbar-thumb: #4a0e63;
+    --scrollbar-thumb-hover: #39ff14;
+}
+
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: auto;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    background-image: radial-gradient(circle at 50% 50%,
+            rgba(74, 14, 99, 0.1) 0%,
+            rgba(31, 99, 87, 0.1) 100%);
+}
+
+main {
+    margin-top: 80px;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+p{
+    margin: 0.5rem;
+}
+
+/* Estilos de botones globales */
+button,
+.btn,
+input[type="submit"] {
+    background: var(--toxic-gradient);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 1px solid var(--secondary-color);
+    box-shadow: var(--toxic-glow);
+    text-decoration: none;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(145deg, rgba(57, 255, 20, 0.8), rgba(152, 255, 133, 0.9));
+    border-color: #98ff85;
+    box-shadow: 0 0 15px rgba(152, 255, 133, 0.8);
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Estilos de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 16px;
+    background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-bg);
+    box-shadow: inset 0 0 8px rgba(57, 255, 20, 0.15);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 8px;
+    border: 3px solid var(--scrollbar-bg);
+    box-shadow: var(--toxic-glow);
+    min-height: 40px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+    border: 2px solid var(--scrollbar-bg);
+}
+
+/* Estilos de títulos de sección */
+section h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: var(--toxic-glow);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--toxic-gradient);
+    border-radius: 3px;
+    box-shadow: var(--toxic-glow);
+}

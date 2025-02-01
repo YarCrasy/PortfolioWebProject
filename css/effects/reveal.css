@@ -1,0 +1,24 @@
+.reveal {
+    position: relative;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal.from-left {
+    transform: translateX(-100px);
+}
+
+.reveal.from-right {
+    transform: translateX(100px);
+}
+
+.reveal.from-left.active,
+.reveal.from-right.active {
+    transform: translateX(0);
+}

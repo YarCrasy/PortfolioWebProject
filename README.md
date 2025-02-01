@@ -9,7 +9,7 @@
 <p>
  This project is a part of a school project to make a simple web page for LND, but also is my portfolio to show my others project, mainly <b>game projects</b>.
 </p>
-<p>The web is actually hosted <a href="https://yarcrasy.github.io/PortfolioWebProject/html/en/index.html">here</a> with Github Pages</p>
+<p>The web is actually hosted <a href="https://yarcrasy.github.io/PortfolioWebProject/html/index.html">here</a> with Github Pages</p>
 
 <b>IMPORTANT NOTE</b>
 <p>
